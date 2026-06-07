@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1",
+  "description": "Observation → Concept → Risk mapping for cross-domain transfer",
+  "mappings": {
+    "jenkins_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.95
+    },
+    "router_admin_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.9
+    },
+    "pacs_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.85
+    },
+    "grafana_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.9
+    },
+    "phpmyadmin_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.95
+    },
+    "admin_panel_detected": {
+      "concept": "web_admin_interface",
+      "confidence": 0.9
+    },
+    "static_http_site": {
+      "concept": "static_content",
+      "confidence": 0.9
+    },
+    "api_endpoint": {
+      "concept": "api_service",
+      "confidence": 0.85
+    },
+    "cdn_node": {
+      "concept": "static_content",
+      "confidence": 0.8
+    }
+  },
+  "inference_rules": [
+    {
+      "rule_id": "R001",
+      "name": "web_admin_weak_password",
+      "conditions": {
+        "concept": "web_admin_interface",
+        "context_required": [
+          "exposed_port",
+          "credential_surface"
+        ]
+      },
+      "conclusion": "weak_password_risk",
+      "confidence_range": [
+        0.3,
+        0.6
+      ],
+      "reasoning": "Web admin interfaces with exposed ports and credential surfaces are common weak password targets"
+    },
+    {
+      "rule_id": "R002",
+      "name": "web_admin_default_creds",
+      "conditions": {
+        "concept": "web_admin_interface",
+        "context_required": [
+          "exposed_port"
+        ]
+      },
+      "conclusion": "default_credentials_risk",
+      "confidence_range": [
+        0.2,
+        0.5
+      ],
+      "reasoning": "Web admin interfaces may use default credentials"
+    }
+  ],
+  "exclusions": {
+    "static_content": [
+      "weak_password_risk",
+      "default_credentials_risk"
+    ],
+    "api_service": [
+      "default_credentials_risk"
+    ]
+  }
+}
