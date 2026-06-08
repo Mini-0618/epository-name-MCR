@@ -1,0 +1,39 @@
+{
+  "scans": [
+    {
+      "target": "localhost",
+      "ip": "127.0.0.1",
+      "time": "2026-06-09T04:35:31.158062",
+      "ports": [
+        80,
+        445
+      ],
+      "paths": [],
+      "risk_score": 16
+    },
+    {
+      "target": "localhost",
+      "ip": "127.0.0.1",
+      "time": "2026-06-09T04:35:49.667297",
+      "ports": [
+        80,
+        445
+      ],
+      "paths": [],
+      "risk_score": 16
+    }
+  ],
+  "findings": {
+    "port:80": {
+      "last_seen": "2026-06-09T04:35:49.667309",
+      "count": 2,
+      "severity": "LOW"
+    },
+    "port:445": {
+      "last_seen": "2026-06-09T04:35:49.667313",
+      "count": 2,
+      "severity": "HIGH"
+    }
+  },
+  "patterns": []
+}
