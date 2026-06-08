@@ -1,0 +1,34 @@
+{
+  "default_model": "ollama:qwen2.5:7b",
+  "providers": {
+    "ollama": {
+      "type": "ollama",
+      "base_url": "http://localhost:11434",
+      "models": ["qwen2.5:7b", "qwen2.5:14b", "llama3.1:8b", "deepseek-coder:6.7b", "codellama:7b"]
+    },
+    "deepseek": {
+      "type": "openai_compatible",
+      "base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "models": ["deepseek-chat", "deepseek-coder"]
+    },
+    "openai": {
+      "type": "openai_compatible",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "models": ["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"]
+    },
+    "anthropic": {
+      "type": "anthropic",
+      "base_url": "https://api.anthropic.com/v1",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "models": ["claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
+    },
+    "local": {
+      "type": "openai_compatible",
+      "base_url": "http://localhost:8080/v1",
+      "api_key_env": null,
+      "models": ["local-model"]
+    }
+  }
+}

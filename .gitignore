@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MCR sensitive
+config/provenance_key.json
+config/a2a_auth.json
+runtime/.wal/
+runtime/.sandbox/
+*.db
+
+# Secrets
+.env
+.env.*
+*_key.json
+*_secret.json
+
+# Logs
+*.log
+logs/
+
+# Node (for console/dashboard)
+node_modules/
+.next/
