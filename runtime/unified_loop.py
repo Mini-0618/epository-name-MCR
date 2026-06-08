@@ -1,13 +1,19 @@
 """
 Unified Cognitive Loop — connects all MCR capabilities into one autonomous flow.
 
-v4.0: Now uses cognitive_bridge to integrate world_model and cognitive_loop.
-The brain actually participates in decisions, not just reads/writes JSONL.
+v5.0: Bio-inspired organism architecture. 10 life systems all participate.
 
-Flow:
-  environment scan → world_model.predict → opportunity detection → goal generation →
-  world_model.gate → goal execution → provenance recording → failure analysis →
-  self correction → cognitive_loop.tick → repeat
+Flow (10 systems):
+  1. 感觉系统 (environment scan)
+  2. 神经系统 (world model predict + cognitive loop)
+  3. 内分泌系统 (global workspace evaluation)
+  4. 记忆系统 (opportunity detection + sleep consolidation)
+  5. 自主神经系统 (goal generation)
+  6. 执行系统 (goal execution with world model gate)
+  7. 免疫系统 (patrol + self-heal)
+  8. 稳态系统 (homeostasis regulation)
+  9. 进化系统 (skill evolution, periodic)
+  10. 循环系统 (provenance recording)
 """
 
 import json
@@ -29,6 +35,31 @@ try:
     COGNITIVE_AVAILABLE = True
 except ImportError:
     COGNITIVE_AVAILABLE = False
+
+# Import new bio-inspired modules
+try:
+    from global_workspace import GlobalWorkspace
+    GLOBAL_WORKSPACE_AVAILABLE = True
+except ImportError:
+    GLOBAL_WORKSPACE_AVAILABLE = False
+
+try:
+    from homeostasis import Homeostasis
+    HOMEOSTASIS_AVAILABLE = True
+except ImportError:
+    HOMEOSTASIS_AVAILABLE = False
+
+try:
+    from evolution import EvolutionEngine
+    EVOLUTION_AVAILABLE = True
+except ImportError:
+    EVOLUTION_AVAILABLE = False
+
+try:
+    from sleep_consolidator import SleepConsolidator
+    SLEEP_AVAILABLE = True
+except ImportError:
+    SLEEP_AVAILABLE = False
 
 
 def load_module(name, path):
@@ -52,17 +83,25 @@ def log_step(step, data):
     return entry
 
 
-def run_cycle(dry_run=False):
+def run_cycle(dry_run=False, cycle_number=0):
     """Run one complete cognitive cycle.
 
-    v4.0: Now integrates world_model predictions and gates.
+    v5.0: 10 life systems all participate.
     """
     cycle_start = datetime.now()
     results = {
         "cycle_start": cycle_start.isoformat(),
+        "cycle_number": cycle_number,
         "steps": {},
         "status": "running",
-        "cognitive_active": COGNITIVE_AVAILABLE
+        "cognitive_active": COGNITIVE_AVAILABLE,
+        "systems_active": {
+            "nervous": COGNITIVE_AVAILABLE,
+            "endocrine": GLOBAL_WORKSPACE_AVAILABLE,
+            "homeostasis": HOMEOSTASIS_AVAILABLE,
+            "evolution": EVOLUTION_AVAILABLE,
+            "sleep": SLEEP_AVAILABLE,
+        },
     }
 
     # Initialize world model if available
@@ -246,6 +285,72 @@ def run_cycle(dry_run=False):
         except Exception as e:
             results["steps"]["cognitive_tick"] = {"error": str(e)[:100]}
 
+    # Step 12: Global Workspace (内分泌系统) — evaluate all events this cycle
+    if GLOBAL_WORKSPACE_AVAILABLE:
+        try:
+            ws = GlobalWorkspace()
+            # Evaluate the cycle itself as an event
+            cycle_event = {
+                "type": "cycle_complete",
+                "cycle_number": cycle_number,
+                "opportunities": results["steps"].get("opportunities", {}).get("found", 0),
+                "failures": results["steps"].get("failures", {}).get("total", 0),
+                "corrections": results["steps"].get("corrections", {}).get("applied", 0),
+            }
+            signal = ws.evaluate(cycle_event)
+            ctx = ws.get_context()
+            results["steps"]["global_workspace"] = {
+                "signal": signal["signal_type"] if signal else "filtered",
+                "saliency": signal["saliency"] if signal else 0,
+                "has_emergency": ctx.get("emergency_pending", False),
+                "focus": ctx.get("focus", {}).get("event_type") if ctx.get("focus") else None,
+            }
+            log_step("global_workspace", results["steps"]["global_workspace"])
+        except Exception as e:
+            results["steps"]["global_workspace"] = {"error": str(e)[:100]}
+
+    # Step 13: Homeostasis (稳态系统) — regulate resources
+    if HOMEOSTASIS_AVAILABLE:
+        try:
+            hs = Homeostasis()
+            hs_results = hs.regulate()
+            abnormal = [k for k, v in hs_results.items() if v.get("status") not in ("normal", "unavailable")]
+            results["steps"]["homeostasis"] = {
+                "regulated": len(hs_results),
+                "abnormal": abnormal,
+                "abnormal_count": len(abnormal),
+            }
+            log_step("homeostasis", results["steps"]["homeostasis"])
+        except Exception as e:
+            results["steps"]["homeostasis"] = {"error": str(e)[:100]}
+
+    # Step 14: Evolution (进化系统) — evolve skills every 10 cycles
+    if EVOLUTION_AVAILABLE and cycle_number > 0 and cycle_number % 10 == 0:
+        try:
+            engine = EvolutionEngine()
+            evo_result = engine.evolve_generation()
+            results["steps"]["evolution"] = {
+                "generation": evo_result["generation"],
+                "best_fitness": evo_result["best_fitness"],
+            }
+            log_step("evolution", results["steps"]["evolution"])
+        except Exception as e:
+            results["steps"]["evolution"] = {"error": str(e)[:100]}
+
+    # Step 15: Sleep Consolidation (记忆系统) — consolidate every 5 cycles
+    if SLEEP_AVAILABLE and cycle_number > 0 and cycle_number % 5 == 0:
+        try:
+            sc = SleepConsolidator()
+            sleep_result = sc.consolidate()
+            results["steps"]["sleep_consolidation"] = {
+                "replayed": sleep_result["replayed"],
+                "integrated": sleep_result["integrated"],
+                "cleaned": sleep_result["cleaned"],
+            }
+            log_step("sleep_consolidation", results["steps"]["sleep_consolidation"])
+        except Exception as e:
+            results["steps"]["sleep_consolidation"] = {"error": str(e)[:100]}
+
     # Summary
     cycle_end = datetime.now()
     duration = (cycle_end - cycle_start).total_seconds()
@@ -268,23 +373,31 @@ def run_cycle(dry_run=False):
 def run_loop(interval=300, cycles=0, dry_run=False):
     """Run the unified loop continuously."""
     cycle = 0
-    print(f"[unified-loop] Starting (interval={interval}s, dry_run={dry_run})")
+    print(f"[unified-loop] Starting v5.0 (interval={interval}s, dry_run={dry_run})")
+    print(f"[unified-loop] Systems: cognitive={COGNITIVE_AVAILABLE} workspace={GLOBAL_WORKSPACE_AVAILABLE} "
+          f"homeostasis={HOMEOSTASIS_AVAILABLE} evolution={EVOLUTION_AVAILABLE} sleep={SLEEP_AVAILABLE}")
 
     try:
         while True:
             cycle += 1
             print(f"\n[unified-loop] Cycle {cycle} starting...")
-            result = run_cycle(dry_run=dry_run)
+            result = run_cycle(dry_run=dry_run, cycle_number=cycle)
 
             # Summary
             steps = result.get("steps", {})
+            systems = result.get("systems_active", {})
             print(f"[unified-loop] Cycle {cycle} done in {result['duration_seconds']}s:")
-            print(f"  Environment: CPU={steps.get('environment', {}).get('cpu', 'N/A')}%")
-            print(f"  Opportunities: {steps.get('opportunities', {}).get('found', 0)}")
-            print(f"  Goals: {steps.get('goals', {}).get('generated', 0)} generated, {len(result.get('executed', []))} executed")
-            print(f"  Failures: {steps.get('failures', {}).get('total', 0)}")
-            print(f"  Corrections: {steps.get('corrections', {}).get('applied', 0)}")
-            print(f"  Provenance: {steps.get('provenance', {}).get('chain_hash', 'N/A')}")
+            print(f"  [感觉] Environment: CPU={steps.get('environment', {}).get('cpu', 'N/A')}%")
+            print(f"  [神经] Cognitive: {steps.get('cognitive_tick', {}).get('status', 'N/A')}")
+            print(f"  [内分泌] Workspace: signal={steps.get('global_workspace', {}).get('signal', 'N/A')}")
+            print(f"  [记忆] Opportunities: {steps.get('opportunities', {}).get('found', 0)}")
+            print(f"  [自主神经] Goals: {steps.get('goals', {}).get('generated', 0)}")
+            print(f"  [免疫] Patrol: detected={steps.get('immune', {}).get('detected', 0)} fixed={steps.get('immune', {}).get('fixed', 0)}")
+            print(f"  [稳态] Abnormal: {steps.get('homeostasis', {}).get('abnormal_count', 0)}")
+            if "evolution" in steps:
+                print(f"  [进化] Gen {steps['evolution'].get('generation', '?')}: fitness={steps['evolution'].get('best_fitness', '?')}")
+            if "sleep_consolidation" in steps:
+                print(f"  [睡眠] Consolidated: replayed={steps['sleep_consolidation'].get('replayed', 0)} cleaned={steps['sleep_consolidation'].get('cleaned', 0)}")
 
             if cycles > 0 and cycle >= cycles:
                 print(f"\n[unified-loop] Completed {cycles} cycles")
@@ -316,7 +429,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "run":
-        result = run_cycle(dry_run=args.dry_run)
+        result = run_cycle(dry_run=args.dry_run, cycle_number=1)
         print(json.dumps(result, indent=2, ensure_ascii=False))
     elif args.command == "loop":
         run_loop(interval=args.interval, cycles=args.cycles, dry_run=args.dry_run)
