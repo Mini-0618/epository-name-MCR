@@ -1,0 +1,15 @@
+{
+    "version": "5.0",
+    "mode": "safe_local",
+    "allow_network": false,
+    "allow_shell": false,
+    "max_tasks_per_cycle": 3,
+    "homeostasis": {
+        "cpu_limit": 0.85,
+        "memory_limit": 0.85,
+        "failure_limit": 3,
+        "energy_limit": 0.7,
+        "confidence_limit": 0.6
+    },
+    "checkpoint_every_cycles": 1
+}
