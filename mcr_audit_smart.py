@@ -20,6 +20,13 @@ from datetime import datetime
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# 尝试导入 CyberForge 知识库
+try:
+    from cyberforge_knowledge import CyberForgeKnowledge
+    CYBERFORGE_AVAILABLE = True
+except ImportError:
+    CYBERFORGE_AVAILABLE = False
+
 
 # ═══ 知识库 ═══
 
@@ -461,6 +468,9 @@ class SecurityAuditor:
         findings = []
         risk_score = 0
 
+        # 初始化 CyberForge 知识库
+        cf = CyberForgeKnowledge() if CYBERFORGE_AVAILABLE else None
+
         # 1. 端口分析
         for p in ports:
             service = p["service"]
@@ -479,6 +489,18 @@ class SecurityAuditor:
                                "HIGH" if service in ("SMB", "RDP", "MSSQL", "MySQL", "VNC") else
                                "MEDIUM" if service in ("FTP", "SMTP") else "LOW",
                 }
+
+                # 从 CyberForge 知识库补充信息
+                if cf:
+                    cf_knowledge = cf.search_service(service)
+                    if cf_knowledge:
+                        finding["cyberforge_knowledge"] = cf_knowledge[:500]
+                    # 搜索 CVE 详细信息
+                    for cve_id in knowledge.get("cves", []):
+                        cve_detail = cf.search_cve(cve_id)
+                        if cve_detail:
+                            finding.setdefault("cve_details", {})[cve_id] = cve_detail[:500]
+
                 findings.append(finding)
                 risk_score += {"CRITICAL": 30, "HIGH": 15, "MEDIUM": 5, "LOW": 1}[finding["severity"]]
             else:
