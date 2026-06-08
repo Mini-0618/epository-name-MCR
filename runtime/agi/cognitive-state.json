@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1",
+  "total_ticks": 1,
+  "last_tick_at": "2026-06-08T01:50:17.344337+00:00",
+  "safety_mode": false,
+  "last_observe_query": "ecosystem status",
+  "last_gate_decision": {
+    "decision": "PASS",
+    "reason": "acceptable risk (prob=0.85, risk=low)"
+  },
+  "actions_executed": 8,
+  "actions_blocked": 0,
+  "errors": []
+}

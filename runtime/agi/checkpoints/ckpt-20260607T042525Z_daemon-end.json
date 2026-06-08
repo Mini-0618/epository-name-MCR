@@ -1,0 +1,57 @@
+{
+  "checkpoint_id": "ckpt-20260607T042525Z",
+  "created_at": 1780806325.4174278,
+  "created_at_iso": "2026-06-07T04:25:25.417428+00:00",
+  "label": "daemon-end",
+  "ecosystem_root": "D:\\ai\\AI_WORKSPACE\\ECOSYSTEM",
+  "state": {
+    "recent_heartbeats": [
+      {
+        "timestamp": "2026-06-07T12:25:24.5071175+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "self-diagnose",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:25:24.6247447+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "daily review",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:25:24.7058169+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "tomorrow plan",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:25:24.7236804+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "auto-goal-scan",
+        "detail": ""
+      },
+      {
+        "heartbeat_id": "hb-bf4c67b5",
+        "run_id": "daemon-092c52e0",
+        "timestamp": "2026-06-07T12:25:25.3556606+08:00",
+        "status": "pass",
+        "phase": "done",
+        "detail": "score=100 duration=215.361s",
+        "steps_passed": 18,
+        "steps_failed": 0,
+        "score": 100,
+        "next_scheduled": "2026-06-07T13:25:25.3456540+08:00",
+        "recovery": false
+      }
+    ],
+    "memory_entries": 15,
+    "task_entries": 340,
+    "skill_files": [
+      "transfer-registry.json"
+    ]
+  }
+}

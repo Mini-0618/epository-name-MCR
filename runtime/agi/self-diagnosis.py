@@ -522,6 +522,26 @@ class SelfDiagnosis:
         with open(FEEDBACK_PENDING_PATH, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
+    def auto_fix(self, dry_run: bool = False) -> Dict[str, Any]:
+        """
+        Run auto-fix for known issues.
+        Integrates with self-improve.py auto-fix.
+        """
+        # Import self-improve module
+        improve_path = self._agi_dir / "self-improve.py"
+        if not improve_path.exists():
+            return {"status": "error", "message": "self-improve.py not found"}
+
+        try:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("self_improve", improve_path)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            si = mod.SelfImprove()
+            return si.auto_fix_all(dry_run=dry_run)
+        except Exception as e:
+            return {"status": "error", "message": str(e)}
+
 
 # ------------------------------------------------------------------
 # CLI

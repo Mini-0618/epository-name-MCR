@@ -228,6 +228,7 @@ class FeedbackLoop:
         """Analyze feedback patterns and return learning summary.
 
         Excludes quarantined feedback from learning.
+        Learns from quarantine patterns to detect injection attempts.
         """
         # Load quarantine list
         quarantine_path = AGI_DIR / "feedback-quarantine.jsonl"
@@ -237,6 +238,14 @@ class FeedbackLoop:
         # Load history, exclude quarantined
         all_history = _load_jsonl(self._history_path)
         valid_history = [e for e in all_history if e.get("question_id", "") not in quarantined_ids]
+
+        # Learn from quarantine patterns
+        quarantine_patterns = {}
+        for entry in quarantined_entries:
+            reason = entry.get("quarantine_reason", "unknown")
+            source = entry.get("source", "unknown")
+            key = f"{source}:{reason}"
+            quarantine_patterns[key] = quarantine_patterns.get(key, 0) + 1
 
         state = _load_json(self._learning_path)
         if not state or not state.get("patterns"):

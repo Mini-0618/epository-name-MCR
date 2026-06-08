@@ -142,17 +142,38 @@ class MemoryRetriever:
             risk_memories = self.retrieve(risk["risk"], limit=2)
             risk_results.extend(risk_memories)
 
-        # Step 4: Merge and deduplicate
+        # Step 4: Search for the original observation too
+        obs_results = self.retrieve(observation, limit=limit)
+
+        # Step 5: Merge and deduplicate with scoring boost
         seen_ids = set()
         merged = []
-        for r in concept_results + risk_results:
+        for r in concept_results:
             r_id = r.get("memory_id") or r.get("content", "")[:50]
             if r_id not in seen_ids:
                 seen_ids.add(r_id)
-                r["retrieval_source"] = "semantic"
+                r["retrieval_source"] = "concept"
+                r["concept"] = concept
+                r["score"] = r.get("score", 0) * 1.2  # boost concept matches
+                merged.append(r)
+
+        for r in risk_results:
+            r_id = r.get("memory_id") or r.get("content", "")[:50]
+            if r_id not in seen_ids:
+                seen_ids.add(r_id)
+                r["retrieval_source"] = "risk"
                 r["concept"] = concept
                 merged.append(r)
 
+        for r in obs_results:
+            r_id = r.get("memory_id") or r.get("content", "")[:50]
+            if r_id not in seen_ids:
+                seen_ids.add(r_id)
+                r["retrieval_source"] = "keyword"
+                merged.append(r)
+
+        # Sort by score
+        merged.sort(key=lambda x: x.get("score", 0), reverse=True)
         return merged[:limit]
 
     def context_for(

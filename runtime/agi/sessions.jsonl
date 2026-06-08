@@ -1,0 +1,77 @@
+{"session_id": "test-session-001", "event": "start", "timestamp": 1780756499.5068107, "timestamp_iso": "2026-06-06T14:34:59.506811+00:00", "started_at": 1780756499.5065646}
+{"session_id": "test-session-001", "event": "heartbeat", "timestamp": 1780756508.8311017, "timestamp_iso": "2026-06-06T14:35:08.831102+00:00"}
+{"session_id": "test-session-001", "event": "stop", "timestamp": 1780756558.026528, "timestamp_iso": "2026-06-06T14:35:58.026528+00:00", "reason": "normal", "duration_seconds": 58.5}
+{"session_id": "daemon-35bba591", "event": "start", "timestamp": 1780771934.9967816, "timestamp_iso": "2026-06-06T18:52:14.996782+00:00", "started_at": 1780771934.9965103}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771935.1109662, "timestamp_iso": "2026-06-06T18:52:15.110966+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771935.6277688, "timestamp_iso": "2026-06-06T18:52:15.627769+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771936.4520042, "timestamp_iso": "2026-06-06T18:52:16.452004+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771937.2791395, "timestamp_iso": "2026-06-06T18:52:17.279140+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771937.769261, "timestamp_iso": "2026-06-06T18:52:17.769261+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771938.412711, "timestamp_iso": "2026-06-06T18:52:18.412711+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771939.1874573, "timestamp_iso": "2026-06-06T18:52:19.187457+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780771939.7304084, "timestamp_iso": "2026-06-06T18:52:19.730408+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772055.713111, "timestamp_iso": "2026-06-06T18:54:15.713111+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772056.6916213, "timestamp_iso": "2026-06-06T18:54:16.691621+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772057.1662087, "timestamp_iso": "2026-06-06T18:54:17.166209+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772057.280101, "timestamp_iso": "2026-06-06T18:54:17.280101+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772057.757636, "timestamp_iso": "2026-06-06T18:54:17.757636+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772057.8482254, "timestamp_iso": "2026-06-06T18:54:17.848225+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772057.9382982, "timestamp_iso": "2026-06-06T18:54:17.938298+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772058.034, "timestamp_iso": "2026-06-06T18:54:18.034000+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772058.1477318, "timestamp_iso": "2026-06-06T18:54:18.147732+00:00"}
+{"session_id": "daemon-35bba591", "event": "heartbeat", "timestamp": 1780772098.6862252, "timestamp_iso": "2026-06-06T18:54:58.686225+00:00"}
+{"session_id": "daemon-35bba591", "event": "stop", "timestamp": 1780772099.5008135, "timestamp_iso": "2026-06-06T18:54:59.500813+00:00", "reason": "normal", "duration_seconds": 164.5}
+{"session_id": "daemon-092c52e0", "event": "start", "timestamp": 1780806110.0736384, "timestamp_iso": "2026-06-07T04:21:50.073638+00:00", "started_at": 1780806110.0732107}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806110.202373, "timestamp_iso": "2026-06-07T04:21:50.202373+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806110.7138288, "timestamp_iso": "2026-06-07T04:21:50.713829+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806111.519035, "timestamp_iso": "2026-06-07T04:21:51.519035+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806112.3010087, "timestamp_iso": "2026-06-07T04:21:52.301009+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806112.7636127, "timestamp_iso": "2026-06-07T04:21:52.763613+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806113.377771, "timestamp_iso": "2026-06-07T04:21:53.377771+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806114.1155949, "timestamp_iso": "2026-06-07T04:21:54.115595+00:00"}
+{"session_id": "daemon-092c52e0", "event": "heartbeat", "timestamp": 1780806114.6294155, "timestamp_iso": "2026-06-07T04:21:54.629416+00:00"}
+{"session_id": "daemon-092c52e0", "event": "stop", "timestamp": 1780806256.2093854, "timestamp_iso": "2026-06-07T04:24:16.209385+00:00", "reason": "superseded", "duration_seconds": 146.1}
+{"session_id": "daemon-56ce99fa", "event": "start", "timestamp": 1780806256.2098973, "timestamp_iso": "2026-06-07T04:24:16.209897+00:00", "started_at": 1780806256.2098897}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806256.3252788, "timestamp_iso": "2026-06-07T04:24:16.325279+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806256.8299165, "timestamp_iso": "2026-06-07T04:24:16.829916+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806257.6620545, "timestamp_iso": "2026-06-07T04:24:17.662055+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806258.4363592, "timestamp_iso": "2026-06-07T04:24:18.436359+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806258.522201, "timestamp_iso": "2026-06-07T04:24:18.522201+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806259.0495322, "timestamp_iso": "2026-06-07T04:24:19.049532+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806259.4309924, "timestamp_iso": "2026-06-07T04:24:19.430992+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806259.7394493, "timestamp_iso": "2026-06-07T04:24:19.739449+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806259.9401774, "timestamp_iso": "2026-06-07T04:24:19.940177+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.090544, "timestamp_iso": "2026-06-07T04:24:20.090544+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.5444977, "timestamp_iso": "2026-06-07T04:24:20.544498+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.5932693, "timestamp_iso": "2026-06-07T04:24:20.593269+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.688378, "timestamp_iso": "2026-06-07T04:24:20.688378+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.786698, "timestamp_iso": "2026-06-07T04:24:20.786698+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806260.8935688, "timestamp_iso": "2026-06-07T04:24:20.893569+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806261.0252795, "timestamp_iso": "2026-06-07T04:24:21.025280+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806261.09252, "timestamp_iso": "2026-06-07T04:24:21.092520+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "heartbeat", "timestamp": 1780806324.5511937, "timestamp_iso": "2026-06-07T04:25:24.551194+00:00"}
+{"session_id": "daemon-56ce99fa", "event": "stop", "timestamp": 1780806325.4720154, "timestamp_iso": "2026-06-07T04:25:25.472015+00:00", "reason": "normal", "duration_seconds": 69.3}
+{"session_id": "daemon-0ff24543", "event": "start", "timestamp": 1780883247.3282037, "timestamp_iso": "2026-06-08T01:47:27.328204+00:00", "started_at": 1780883247.32786}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883247.4775207, "timestamp_iso": "2026-06-08T01:47:27.477521+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883248.0801382, "timestamp_iso": "2026-06-08T01:47:28.080138+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883249.0488203, "timestamp_iso": "2026-06-08T01:47:29.048820+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883250.040194, "timestamp_iso": "2026-06-08T01:47:30.040194+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883250.6419978, "timestamp_iso": "2026-06-08T01:47:30.641998+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883251.41025, "timestamp_iso": "2026-06-08T01:47:31.410250+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883252.3436048, "timestamp_iso": "2026-06-08T01:47:32.343605+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883252.962549, "timestamp_iso": "2026-06-08T01:47:32.962549+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883414.2343028, "timestamp_iso": "2026-06-08T01:50:14.234303+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883415.5658474, "timestamp_iso": "2026-06-08T01:50:15.565847+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883416.1832907, "timestamp_iso": "2026-06-08T01:50:16.183291+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883416.3364258, "timestamp_iso": "2026-06-08T01:50:16.336426+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883416.9244323, "timestamp_iso": "2026-06-08T01:50:16.924432+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883417.0400925, "timestamp_iso": "2026-06-08T01:50:17.040092+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883417.1520317, "timestamp_iso": "2026-06-08T01:50:17.152032+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883417.2888665, "timestamp_iso": "2026-06-08T01:50:17.288867+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883417.4043903, "timestamp_iso": "2026-06-08T01:50:17.404390+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883417.5439944, "timestamp_iso": "2026-06-08T01:50:17.543994+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883496.5709057, "timestamp_iso": "2026-06-08T01:51:36.570906+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883496.7067747, "timestamp_iso": "2026-06-08T01:51:36.706775+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883496.8266165, "timestamp_iso": "2026-06-08T01:51:36.826617+00:00"}
+{"session_id": "daemon-0ff24543", "event": "heartbeat", "timestamp": 1780883496.9614077, "timestamp_iso": "2026-06-08T01:51:36.961408+00:00"}
+{"session_id": "daemon-0ff24543", "event": "stop", "timestamp": 1780883497.9329166, "timestamp_iso": "2026-06-08T01:51:37.932917+00:00", "reason": "normal", "duration_seconds": 250.6}

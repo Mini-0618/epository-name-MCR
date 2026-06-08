@@ -1,0 +1,6 @@
+{"type": "file_count_changed", "app_id": "codex.local", "detail": "File count: 696 -> 2045 (194% change)", "previous": 696, "current": 2045, "timestamp": "2026-06-08T01:51:06.013197+00:00"}
+{"type": "size_changed", "app_id": "codex.local", "detail": "Size: 917.2MB -> 37.4MB (96% change)", "previous": 917.19, "current": 37.38, "timestamp": "2026-06-08T01:51:06.013206+00:00"}
+{"type": "git_status_changed", "app_id": "codex.local", "detail": "Git: no-git -> error", "previous": "no-git", "current": "error", "timestamp": "2026-06-08T01:51:06.013210+00:00"}
+{"type": "new_app", "app_id": "mcr-biz", "detail": "New app detected: mcr-biz", "timestamp": "2026-06-08T01:51:06.013222+00:00"}
+{"type": "new_app", "app_id": "mcr-creative", "detail": "New app detected: mcr-creative", "timestamp": "2026-06-08T01:51:06.013224+00:00"}
+{"type": "new_app", "app_id": "mcr-furniture", "detail": "New app detected: mcr-furniture", "timestamp": "2026-06-08T01:51:06.013226+00:00"}

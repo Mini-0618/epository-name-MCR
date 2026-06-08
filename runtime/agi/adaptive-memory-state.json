@@ -1,0 +1,37 @@
+{
+  "weights": {
+    "working": 0.7499999999999998,
+    "episodic": 2.95,
+    "semantic": 1.0,
+    "archive": 1.0
+  },
+  "habits": {
+    "streak_tier": "working",
+    "streak_count": 1,
+    "history": [
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "working",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "working"
+    ],
+    "bonuses_applied": 7
+  },
+  "log_count": 12,
+  "updated_at": "2026-06-08T01:50:16.066936+00:00"
+}

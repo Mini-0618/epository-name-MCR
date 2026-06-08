@@ -1,0 +1,105 @@
+{
+  "schema_version": "0.1",
+  "memories": {
+    "mem-9abbf75b": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 0,
+      "last_access_event": 0,
+      "manual_override": false
+    },
+    "mem-a9a68319": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 1,
+      "last_access_event": 1,
+      "manual_override": false
+    },
+    "mem-f866e5f8": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 2,
+      "last_access_event": 2,
+      "manual_override": false
+    },
+    "mem-a91f925f": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 3,
+      "last_access_event": 3,
+      "manual_override": false
+    },
+    "mem-c53dc761": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 4,
+      "last_access_event": 4,
+      "manual_override": false
+    },
+    "mem-2a127ca0": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 5,
+      "last_access_event": 5,
+      "manual_override": false
+    },
+    "mem-5697bc1b": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 6,
+      "last_access_event": 6,
+      "manual_override": false
+    },
+    "mem-f099f107": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 7,
+      "last_access_event": 7,
+      "manual_override": false
+    },
+    "mem-951a3741": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 8,
+      "last_access_event": 8,
+      "manual_override": false
+    },
+    "mem-e3c2ee39": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 9,
+      "last_access_event": 9,
+      "manual_override": false
+    },
+    "mem-d845bb3f": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 10,
+      "last_access_event": 10,
+      "manual_override": false
+    },
+    "mem-838a67dd": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 11,
+      "last_access_event": 11,
+      "manual_override": false
+    },
+    "mem-76ee25cc": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 12,
+      "last_access_event": 12,
+      "manual_override": false
+    },
+    "mem-1ce2b2d2": {
+      "tier": "working",
+      "access_count": 0,
+      "first_seen_event": 13,
+      "last_access_event": 13,
+      "manual_override": false
+    }
+  },
+  "total_transitions": 0,
+  "last_evaluated": "2026-06-08T01:50:16.979709+00:00"
+}

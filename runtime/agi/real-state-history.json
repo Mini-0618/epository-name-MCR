@@ -1,0 +1,1440 @@
+{
+  "last_ecosystem": {
+    "total_apps": 18,
+    "healthy": 18,
+    "warning": 0,
+    "critical": 0,
+    "total_size_mb": 25995.03,
+    "disk_free_mb": 855746.5,
+    "issues": [],
+    "checked_at": "2026-06-08T01:51:36.506846+00:00"
+  },
+  "last_check": {
+    "checked_at": "2026-06-08T01:51:06.015694+00:00",
+    "apps": {
+      "anvil.one": {
+        "app_id": "anvil.one",
+        "exists": true,
+        "file_count": 493608,
+        "total_size_mb": 2099.02,
+        "last_modified": "2026-06-07T05:57:35.770985+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "codex.local": {
+        "app_id": "codex.local",
+        "exists": true,
+        "file_count": 2045,
+        "total_size_mb": 37.38,
+        "last_modified": "2026-06-07T18:35:53.760621+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "comfyui.main": {
+        "app_id": "comfyui.main",
+        "exists": true,
+        "file_count": 78308,
+        "total_size_mb": 17608.73,
+        "last_modified": "2026-06-05T16:13:27.091858+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "cyberforge": {
+        "app_id": "cyberforge",
+        "exists": true,
+        "file_count": 493608,
+        "total_size_mb": 2099.02,
+        "last_modified": "2026-06-07T05:57:35.770985+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "hermes.agent": {
+        "app_id": "hermes.agent",
+        "exists": true,
+        "file_count": 5,
+        "total_size_mb": 0.0,
+        "last_modified": "2026-06-05T16:11:25.961280+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "hermes.sec": {
+        "app_id": "hermes.sec",
+        "exists": true,
+        "file_count": 2,
+        "total_size_mb": 0.0,
+        "last_modified": "2026-06-05T16:11:25.961280+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "hermes.securitylab": {
+        "app_id": "hermes.securitylab",
+        "exists": true,
+        "file_count": 340,
+        "total_size_mb": 4.86,
+        "last_modified": "2026-06-05T16:13:27.092862+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "hermes.webui": {
+        "app_id": "hermes.webui",
+        "exists": true,
+        "file_count": 34632,
+        "total_size_mb": 646.17,
+        "last_modified": "2026-06-05T16:13:27.100353+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "interactive.3d": {
+        "app_id": "interactive.3d",
+        "exists": true,
+        "file_count": 9353,
+        "total_size_mb": 234.57,
+        "last_modified": "2026-06-05T16:11:25.962285+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "knowledge.mcr": {
+        "app_id": "knowledge.mcr",
+        "exists": true,
+        "file_count": 243,
+        "total_size_mb": 0.88,
+        "last_modified": "2026-06-05T16:11:25.961280+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "marvis": {
+        "app_id": "marvis",
+        "exists": true,
+        "file_count": 29577,
+        "total_size_mb": 2864.35,
+        "last_modified": "2026-06-05T16:13:27.123219+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "mcr-biz": {
+        "app_id": "mcr-biz",
+        "exists": true,
+        "file_count": 2,
+        "total_size_mb": 0.0,
+        "last_modified": "2026-06-07T05:19:07.399726+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "mcr-creative": {
+        "app_id": "mcr-creative",
+        "exists": true,
+        "file_count": 2,
+        "total_size_mb": 0.0,
+        "last_modified": "2026-06-07T05:19:18.086727+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "mcr-furniture": {
+        "app_id": "mcr-furniture",
+        "exists": true,
+        "file_count": 2,
+        "total_size_mb": 0.0,
+        "last_modified": "2026-06-07T05:19:12.666970+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "mcr.runtime": {
+        "app_id": "mcr.runtime",
+        "exists": true,
+        "file_count": 3685,
+        "total_size_mb": 257.45,
+        "last_modified": "2026-06-06T14:12:19.559450+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "obsidian.mcr": {
+        "app_id": "obsidian.mcr",
+        "exists": true,
+        "file_count": 91,
+        "total_size_mb": 8.32,
+        "last_modified": "2026-06-06T13:02:44.108198+00:00",
+        "git_status": "no-git",
+        "has_readme": true,
+        "has_manifest": false,
+        "health": "healthy"
+      },
+      "shannon": {
+        "app_id": "shannon",
+        "exists": true,
+        "file_count": 503,
+        "total_size_mb": 113.43,
+        "last_modified": "2026-06-05T16:13:27.125228+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      },
+      "wan2.1": {
+        "app_id": "wan2.1",
+        "exists": true,
+        "file_count": 88,
+        "total_size_mb": 20.85,
+        "last_modified": "2026-06-05T16:13:27.126225+00:00",
+        "git_status": "error",
+        "has_readme": true,
+        "has_manifest": true,
+        "health": "healthy"
+      }
+    }
+  },
+  "snapshots": [
+    {
+      "checked_at": "2026-06-06T17:52:55.211087+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 693,
+          "total_size_mb": 917.15,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-06T17:53:40.211397+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 693,
+          "total_size_mb": 917.15,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-06T17:54:30.829341+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 693,
+          "total_size_mb": 917.15,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-06T18:54:38.403680+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 693,
+          "total_size_mb": 917.15,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-07T04:24:59.560048+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 696,
+          "total_size_mb": 917.19,
+          "last_modified": "2026-06-06T19:50:32.391179+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-07T04:27:00.043734+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 696,
+          "total_size_mb": 917.19,
+          "last_modified": "2026-06-06T19:50:32.391179+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493575,
+          "total_size_mb": 2098.81,
+          "last_modified": "2026-06-05T16:52:07.946196+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    },
+    {
+      "checked_at": "2026-06-08T01:51:06.015694+00:00",
+      "apps": {
+        "anvil.one": {
+          "app_id": "anvil.one",
+          "exists": true,
+          "file_count": 493608,
+          "total_size_mb": 2099.02,
+          "last_modified": "2026-06-07T05:57:35.770985+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "codex.local": {
+          "app_id": "codex.local",
+          "exists": true,
+          "file_count": 2045,
+          "total_size_mb": 37.38,
+          "last_modified": "2026-06-07T18:35:53.760621+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "comfyui.main": {
+          "app_id": "comfyui.main",
+          "exists": true,
+          "file_count": 78308,
+          "total_size_mb": 17608.73,
+          "last_modified": "2026-06-05T16:13:27.091858+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "cyberforge": {
+          "app_id": "cyberforge",
+          "exists": true,
+          "file_count": 493608,
+          "total_size_mb": 2099.02,
+          "last_modified": "2026-06-07T05:57:35.770985+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.agent": {
+          "app_id": "hermes.agent",
+          "exists": true,
+          "file_count": 5,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.sec": {
+          "app_id": "hermes.sec",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.securitylab": {
+          "app_id": "hermes.securitylab",
+          "exists": true,
+          "file_count": 340,
+          "total_size_mb": 4.86,
+          "last_modified": "2026-06-05T16:13:27.092862+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "hermes.webui": {
+          "app_id": "hermes.webui",
+          "exists": true,
+          "file_count": 34632,
+          "total_size_mb": 646.17,
+          "last_modified": "2026-06-05T16:13:27.100353+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "interactive.3d": {
+          "app_id": "interactive.3d",
+          "exists": true,
+          "file_count": 9353,
+          "total_size_mb": 234.57,
+          "last_modified": "2026-06-05T16:11:25.962285+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "knowledge.mcr": {
+          "app_id": "knowledge.mcr",
+          "exists": true,
+          "file_count": 243,
+          "total_size_mb": 0.88,
+          "last_modified": "2026-06-05T16:11:25.961280+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "marvis": {
+          "app_id": "marvis",
+          "exists": true,
+          "file_count": 29577,
+          "total_size_mb": 2864.35,
+          "last_modified": "2026-06-05T16:13:27.123219+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "mcr-biz": {
+          "app_id": "mcr-biz",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-07T05:19:07.399726+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "mcr-creative": {
+          "app_id": "mcr-creative",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-07T05:19:18.086727+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "mcr-furniture": {
+          "app_id": "mcr-furniture",
+          "exists": true,
+          "file_count": 2,
+          "total_size_mb": 0.0,
+          "last_modified": "2026-06-07T05:19:12.666970+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "mcr.runtime": {
+          "app_id": "mcr.runtime",
+          "exists": true,
+          "file_count": 3685,
+          "total_size_mb": 257.45,
+          "last_modified": "2026-06-06T14:12:19.559450+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "obsidian.mcr": {
+          "app_id": "obsidian.mcr",
+          "exists": true,
+          "file_count": 91,
+          "total_size_mb": 8.32,
+          "last_modified": "2026-06-06T13:02:44.108198+00:00",
+          "git_status": "no-git",
+          "has_readme": true,
+          "has_manifest": false,
+          "health": "healthy"
+        },
+        "shannon": {
+          "app_id": "shannon",
+          "exists": true,
+          "file_count": 503,
+          "total_size_mb": 113.43,
+          "last_modified": "2026-06-05T16:13:27.125228+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        },
+        "wan2.1": {
+          "app_id": "wan2.1",
+          "exists": true,
+          "file_count": 88,
+          "total_size_mb": 20.85,
+          "last_modified": "2026-06-05T16:13:27.126225+00:00",
+          "git_status": "error",
+          "has_readme": true,
+          "has_manifest": true,
+          "health": "healthy"
+        }
+      }
+    }
+  ]
+}

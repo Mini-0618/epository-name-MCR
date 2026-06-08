@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-06-08T01:57:44.914074+00:00",
+  "total_feedback": 2,
+  "quarantined": 0,
+  "clean": 2,
+  "issues": [],
+  "quarantine_rate": 0.0,
+  "pattern_issues": {
+    "template_repeats": 0,
+    "concentration": 0,
+    "failed_spikes": 0
+  }
+}

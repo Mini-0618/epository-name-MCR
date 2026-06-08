@@ -1,0 +1,63 @@
+{
+  "checkpoint_id": "ckpt-20260606T143615Z",
+  "created_at": 1780756575.1792924,
+  "created_at_iso": "2026-06-06T14:36:15.179292+00:00",
+  "label": "test-checkpoint",
+  "ecosystem_root": "D:\\ai\\AI_WORKSPACE\\ECOSYSTEM",
+  "state": {
+    "recent_heartbeats": [
+      {
+        "timestamp": "2026-06-06T22:23:00.6667501+08:00",
+        "run_id": "daemon-8110e0c2",
+        "status": "running",
+        "phase": "tomorrow plan",
+        "detail": ""
+      },
+      {
+        "heartbeat_id": "hb-f423cd87",
+        "run_id": "daemon-8110e0c2",
+        "timestamp": "2026-06-06T22:23:00.6764087+08:00",
+        "status": "pass",
+        "phase": "done",
+        "detail": "score=100 duration=141.096s",
+        "steps_passed": 8,
+        "steps_failed": 0,
+        "score": 100,
+        "next_scheduled": "2026-06-06T23:23:00.6764087+08:00",
+        "recovery": false
+      },
+      {
+        "timestamp": "2026-06-06T22:24:31.8089828+08:00",
+        "run_id": "daemon-8cb11b36",
+        "status": "running",
+        "phase": "daily review",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-06T22:24:31.8440670+08:00",
+        "run_id": "daemon-8cb11b36",
+        "status": "running",
+        "phase": "tomorrow plan",
+        "detail": ""
+      },
+      {
+        "heartbeat_id": "hb-0524ab37",
+        "run_id": "daemon-8cb11b36",
+        "timestamp": "2026-06-06T22:24:31.8733680+08:00",
+        "status": "pass",
+        "phase": "done",
+        "detail": "score=100 duration=125.312s",
+        "steps_passed": 8,
+        "steps_failed": 0,
+        "score": 100,
+        "next_scheduled": "2026-06-06T23:24:31.8733680+08:00",
+        "recovery": false
+      }
+    ],
+    "memory_entries": 15,
+    "task_entries": 340,
+    "skill_files": [
+      "transfer-registry.json"
+    ]
+  }
+}

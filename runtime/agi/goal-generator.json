@@ -1,0 +1,287 @@
+﻿{
+    "schema_version":  "0.1",
+    "description":  "Autonomous goal generation from memory patterns",
+    "patterns_detected":  [
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027write run memory\u0027 succeeded 15 times",
+                                  "task":  "write run memory",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027task validate\u0027 succeeded 15 times",
+                                  "task":  "task validate",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027generate report\u0027 succeeded 15 times",
+                                  "task":  "generate report",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027registry validate\u0027 succeeded 15 times",
+                                  "task":  "registry validate",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027integration gate\u0027 succeeded 15 times",
+                                  "task":  "integration gate",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "detail":  "Task \u0027task run\u0027 succeeded 15 times",
+                                  "task":  "task run",
+                                  "type":  "success_frequency"
+                              },
+                              {
+                                  "count":  15,
+                                  "domain":  "swarm",
+                                  "detail":  "Domain \u0027swarm\u0027 appeared in 15 runs",
+                                  "type":  "domain_frequency"
+                              },
+                              {
+                                  "count":  3,
+                                  "detail":  "3 runs clustered at hour 12",
+                                  "hour":  12,
+                                  "type":  "time_cluster"
+                              },
+                              {
+                                  "count":  3,
+                                  "detail":  "3 runs clustered at hour 10",
+                                  "hour":  10,
+                                  "type":  "time_cluster"
+                              },
+                              {
+                                  "count":  3,
+                                  "detail":  "3 runs clustered at hour 22",
+                                  "hour":  22,
+                                  "type":  "time_cluster"
+                              },
+                              {
+                                  "count":  5,
+                                  "detail":  "5 runs clustered at hour 19",
+                                  "hour":  19,
+                                  "type":  "time_cluster"
+                              }
+                          ],
+    "auto_goals_generated":  [
+                                 {
+                                     "goal_id":  "auto-8b706a32",
+                                     "created_at":  "2026-06-06T21:06:33.8594500+08:00",
+                                     "source_pattern":  "success_frequency:write run memory:12",
+                                     "title":  "automate \u0027write run memory\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027write run memory\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-260f2989",
+                                     "created_at":  "2026-06-06T21:06:33.8623935+08:00",
+                                     "source_pattern":  "success_frequency:task validate:12",
+                                     "title":  "automate \u0027task validate\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027task validate\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-92583a42",
+                                     "created_at":  "2026-06-06T21:06:33.8623935+08:00",
+                                     "source_pattern":  "success_frequency:generate report:12",
+                                     "title":  "automate \u0027generate report\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027generate report\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-e5fac207",
+                                     "created_at":  "2026-06-06T21:06:33.8623935+08:00",
+                                     "source_pattern":  "success_frequency:registry validate:12",
+                                     "title":  "automate \u0027registry validate\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027registry validate\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-84e15a1f",
+                                     "created_at":  "2026-06-06T21:06:33.8623935+08:00",
+                                     "source_pattern":  "success_frequency:integration gate:12",
+                                     "title":  "automate \u0027integration gate\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027integration gate\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-5c32accd",
+                                     "created_at":  "2026-06-06T21:06:33.8623935+08:00",
+                                     "source_pattern":  "success_frequency:task run:12",
+                                     "title":  "automate \u0027task run\u0027 - succeeded 12 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027task run\u0027 has a strong success record (12 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-ca7b5785",
+                                     "created_at":  "2026-06-06T21:06:33.8633669+08:00",
+                                     "source_pattern":  "domain_frequency:swarm:12",
+                                     "title":  "deep exploration of \u0027swarm\u0027 domain - 12 runs",
+                                     "type":  "exploration",
+                                     "reason":  "Domain \u0027swarm\u0027 is frequently active (12 runs)",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-4c42664d",
+                                     "created_at":  "2026-06-06T21:06:33.8643456+08:00",
+                                     "source_pattern":  "time_cluster:12:3",
+                                     "title":  "schedule automated run at hour 12 - 3 runs at this time",
+                                     "type":  "automation",
+                                     "reason":  "3 runs clustered at hour 12, consider scheduling",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-4d470870",
+                                     "created_at":  "2026-06-06T21:06:33.8643456+08:00",
+                                     "source_pattern":  "time_cluster:10:3",
+                                     "title":  "schedule automated run at hour 10 - 3 runs at this time",
+                                     "type":  "automation",
+                                     "reason":  "3 runs clustered at hour 10, consider scheduling",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-fc76845a",
+                                     "created_at":  "2026-06-06T21:06:33.8643456+08:00",
+                                     "source_pattern":  "time_cluster:19:5",
+                                     "title":  "schedule automated run at hour 19 - 5 runs at this time",
+                                     "type":  "automation",
+                                     "reason":  "5 runs clustered at hour 19, consider scheduling",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-0cb461b5",
+                                     "created_at":  "2026-06-06T21:06:33.8653134+08:00",
+                                     "source_pattern":  "memory_threshold:12",
+                                     "title":  "consolidate memory into knowledge base",
+                                     "type":  "consolidation",
+                                     "reason":  "Memory has 12 entries, time to consolidate",
+                                     "priority":  "medium",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-e4482537",
+                                     "created_at":  "2026-06-06T21:06:33.8662901+08:00",
+                                     "source_pattern":  "success_frequency:registry validate:12",
+                                     "title":  "automate registry validation in daemon",
+                                     "type":  "automation",
+                                     "reason":  "registry validate succeeded 12 times, safe to automate",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-8029fa1e",
+                                     "created_at":  "2026-06-06T21:06:33.8662901+08:00",
+                                     "source_pattern":  "success_frequency:integration gate:12",
+                                     "title":  "make integration gate a scheduled task",
+                                     "type":  "automation",
+                                     "reason":  "integration gate succeeded 12 times, safe to schedule",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-338222ae",
+                                     "created_at":  "2026-06-07T02:54:59.2470917+08:00",
+                                     "source_pattern":  "success_frequency:write run memory:15",
+                                     "title":  "automate \u0027write run memory\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027write run memory\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-fcf276f0",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "success_frequency:task validate:15",
+                                     "title":  "automate \u0027task validate\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027task validate\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-99803097",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "success_frequency:generate report:15",
+                                     "title":  "automate \u0027generate report\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027generate report\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-aa384fe6",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "success_frequency:registry validate:15",
+                                     "title":  "automate \u0027registry validate\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027registry validate\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-516be5b7",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "success_frequency:integration gate:15",
+                                     "title":  "automate \u0027integration gate\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027integration gate\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-55412706",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "success_frequency:task run:15",
+                                     "title":  "automate \u0027task run\u0027 - succeeded 15 times",
+                                     "type":  "automation",
+                                     "reason":  "Task \u0027task run\u0027 has a strong success record (15 successes)",
+                                     "priority":  "high",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-c9fa7f60",
+                                     "created_at":  "2026-06-07T02:54:59.2500902+08:00",
+                                     "source_pattern":  "domain_frequency:swarm:15",
+                                     "title":  "deep exploration of \u0027swarm\u0027 domain - 15 runs",
+                                     "type":  "exploration",
+                                     "reason":  "Domain \u0027swarm\u0027 is frequently active (15 runs)",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 },
+                                 {
+                                     "goal_id":  "auto-c4ef9e68",
+                                     "created_at":  "2026-06-07T02:54:59.2526982+08:00",
+                                     "source_pattern":  "time_cluster:22:3",
+                                     "title":  "schedule automated run at hour 22 - 3 runs at this time",
+                                     "type":  "automation",
+                                     "reason":  "3 runs clustered at hour 22, consider scheduling",
+                                     "priority":  "low",
+                                     "status":  "proposed"
+                                 }
+                             ],
+    "last_scan":  "2026-06-08T09:51:37.6587814+08:00",
+    "total_scans":  11,
+    "total_goals_generated":  21
+}

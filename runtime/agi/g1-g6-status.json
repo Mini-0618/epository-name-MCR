@@ -1,0 +1,36 @@
+{
+  "G1": "PASS",
+  "G2": "PASS",
+  "G3": "PASS",
+  "G4": "PASS",
+  "G5": "PASS",
+  "G6": "PASS",
+  "weights": {
+    "working": 0.75,
+    "episodic": 2.95,
+    "semantic": 1.0,
+    "archive": 1.0
+  },
+  "habits": {
+    "streak_tier": "working",
+    "streak_count": 1,
+    "recent_history": [
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "episodic",
+      "working"
+    ],
+    "bonuses_applied": 7,
+    "pattern_detected": false
+  },
+  "retrieval_time_ms": 0.12,
+  "memory_file": "D:\\ai\\AI_WORKSPACE\\ECOSYSTEM\\runtime\\memory\\life-memory.jsonl",
+  "timestamp": "2026-06-08T09:50:16",
+  "summary": "6/6 gates passed"
+}

@@ -1,0 +1,13 @@
+{
+  "patterns": {
+    "manual:memory": {
+      "total": 1,
+      "positive": 1,
+      "negative": 0,
+      "skip": 0,
+      "confidence": 0.5
+    }
+  },
+  "total_answered": 1,
+  "last_updated": "2026-06-06T17:54:52.308453+00:00"
+}

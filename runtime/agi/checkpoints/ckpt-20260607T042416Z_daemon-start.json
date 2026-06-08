@@ -1,0 +1,51 @@
+{
+  "checkpoint_id": "ckpt-20260607T042416Z",
+  "created_at": 1780806256.271708,
+  "created_at_iso": "2026-06-07T04:24:16.271708+00:00",
+  "label": "daemon-start",
+  "ecosystem_root": "D:\\ai\\AI_WORKSPACE\\ECOSYSTEM",
+  "state": {
+    "recent_heartbeats": [
+      {
+        "timestamp": "2026-06-07T12:21:52.7255604+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "skill candidates",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:21:53.3395143+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "swarm deliveries",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:21:54.0752082+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "eval agi-readiness",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:21:54.5908523+08:00",
+        "run_id": "daemon-092c52e0",
+        "status": "running",
+        "phase": "integration gate",
+        "detail": ""
+      },
+      {
+        "timestamp": "2026-06-07T12:24:16.1595772+08:00",
+        "run_id": "daemon-56ce99fa",
+        "status": "running",
+        "phase": "start",
+        "detail": ""
+      }
+    ],
+    "memory_entries": 15,
+    "task_entries": 340,
+    "skill_files": [
+      "transfer-registry.json"
+    ]
+  }
+}

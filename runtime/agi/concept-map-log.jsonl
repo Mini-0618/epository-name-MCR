@@ -1,0 +1,29 @@
+{"type": "resolve", "observation": "jenkins_detected", "concept": "web_admin_interface", "confidence": 0.95, "resolved_at": "2026-06-07T12:02:33.021479+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:02:33.021780+00:00"}
+{"type": "resolve", "observation": "router_admin_detected", "concept": "web_admin_interface", "confidence": 0.9, "resolved_at": "2026-06-07T12:02:33.022009+00:00"}
+{"type": "resolve", "observation": "static_http_site", "concept": "static_content", "confidence": 0.9, "resolved_at": "2026-06-07T12:02:33.022215+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:02:33.022416+00:00"}
+{"type": "infer", "observation": "pacs_detected", "concept": "web_admin_interface", "context": ["exposed_port", "credential_surface"], "results_count": 2, "risks": ["weak_password_risk", "default_credentials_risk"]}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:02:33.045226+00:00"}
+{"type": "infer", "observation": "pacs_detected", "concept": "web_admin_interface", "context": ["exposed_port"], "results_count": 1, "risks": ["default_credentials_risk"]}
+{"type": "resolve", "observation": "static_http_site", "concept": "static_content", "confidence": 0.9, "resolved_at": "2026-06-07T12:02:33.045644+00:00"}
+{"type": "infer", "observation": "static_http_site", "concept": "static_content", "context": ["exposed_port", "credential_surface"], "results_count": 0, "risks": []}
+{"type": "resolve", "observation": "jenkins_detected", "concept": "web_admin_interface", "confidence": 0.95, "resolved_at": "2026-06-07T12:02:33.045995+00:00"}
+{"type": "infer", "observation": "jenkins_detected", "concept": "web_admin_interface", "context": ["exposed_port", "credential_surface"], "results_count": 2, "risks": ["weak_password_risk", "default_credentials_risk"]}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:02:33.046339+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:02:33.046507+00:00"}
+{"type": "infer", "observation": "pacs_detected", "concept": "web_admin_interface", "context": ["exposed_port", "credential_surface"], "results_count": 2, "risks": ["weak_password_risk", "default_credentials_risk"]}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:04:39.003147+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T12:04:39.059595+00:00"}
+{"type": "infer", "observation": "pacs_detected", "concept": "web_admin_interface", "context": ["exposed_port", "credential_surface"], "results_count": 2, "risks": ["weak_password_risk", "default_credentials_risk"]}
+{"type": "resolve", "observation": "static_http_site", "concept": "static_content", "confidence": 0.9, "resolved_at": "2026-06-07T12:04:39.111801+00:00"}
+{"type": "resolve", "observation": "static_http_site", "concept": "static_content", "confidence": 0.9, "resolved_at": "2026-06-07T12:04:39.186224+00:00"}
+{"type": "infer", "observation": "static_http_site", "concept": "static_content", "context": ["exposed_port", "credential_surface"], "results_count": 0, "risks": []}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T17:57:59.871631+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T18:02:47.330736+00:00"}
+{"type": "resolve", "observation": "pacs_detected", "concept": "web_admin_interface", "confidence": 0.85, "resolved_at": "2026-06-07T18:02:47.331134+00:00"}
+{"type": "infer", "observation": "pacs_detected", "concept": "web_admin_interface", "context": [], "results_count": 0, "risks": []}
+{"type": "resolve", "observation": "jenkins_detected", "concept": "web_admin_interface", "confidence": 0.95, "resolved_at": "2026-06-07T18:04:10.796326+00:00"}
+{"type": "resolve", "observation": "jenkins_detected", "concept": "web_admin_interface", "confidence": 0.95, "resolved_at": "2026-06-07T18:04:10.796625+00:00"}
+{"type": "infer", "observation": "jenkins_detected", "concept": "web_admin_interface", "context": [], "results_count": 0, "risks": []}
+{"type": "resolve", "observation": "jenkins_detected", "concept": "web_admin_interface", "confidence": 0.95, "resolved_at": "2026-06-07T18:04:23.159349+00:00"}

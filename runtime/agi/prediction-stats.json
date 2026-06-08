@@ -1,0 +1,7 @@
+{
+  "reset_at": "2026-06-08T02:59:41.292232+00:00",
+  "reason": "prediction_drift_fix",
+  "brier_score": null,
+  "accuracy": null,
+  "sample_count": 0
+}

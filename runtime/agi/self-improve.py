@@ -486,8 +486,8 @@ class SelfImprove:
 
         return result
 
-    def auto_fix_all(self, dry_run: bool = True) -> Dict[str, Any]:
-        """Run all auto-fixes and return results."""
+    def auto_fix_all(self, dry_run: bool = False) -> Dict[str, Any]:
+        """Run all auto-fixes and return results. Default: apply fixes."""
         results = {}
         for fix_type in self.AUTO_FIX_RULES:
             results[fix_type] = self.apply_fix(fix_type, dry_run=dry_run)
@@ -539,16 +539,16 @@ def cli():
 
     elif action == "fix":
         if len(sys.argv) < 3:
-            print("Usage: self-improve.py fix <fix_type> [--apply]")
+            print("Usage: self-improve.py fix <fix_type> [--dry-run]")
             print(f"Available fixes: {list(SelfImprove.AUTO_FIX_RULES.keys())}")
             sys.exit(1)
         fix_type = sys.argv[2]
-        dry_run = "--apply" not in sys.argv
+        dry_run = "--dry-run" in sys.argv
         result = si.apply_fix(fix_type, dry_run=dry_run)
         print(json.dumps(result, indent=2, ensure_ascii=False))
 
     elif action == "auto-fix":
-        dry_run = "--apply" not in sys.argv
+        dry_run = "--dry-run" in sys.argv
         results = si.auto_fix_all(dry_run=dry_run)
         print(json.dumps(results, indent=2, ensure_ascii=False))
 

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-08T01:51:36.641507+00:00",
+  "issues": [
+    {
+      "check": "daemon_state",
+      "severity": "info",
+      "message": "No daemon state.json found",
+      "recommendation": "Run daemon once to initialize"
+    }
+  ],
+  "severity": "ok",
+  "recommendations": [
+    "Run daemon once to initialize"
+  ],
+  "issue_count": 1,
+  "health_score": 98
+}
