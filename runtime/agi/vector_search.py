@@ -133,9 +133,10 @@ class VectorIndex:
         self._cache_path = self._root / "runtime" / "agi" / "vector-cache.json"
 
         # Initialize embedding model
-        if embedding_model and HAS_SENTENCE_TRANSFORMERS:
-            self._encoder = SentenceTransformer(embedding_model)
-            self._encoder_name = embedding_model
+        if HAS_SENTENCE_TRANSFORMERS:
+            model_name = embedding_model or "all-MiniLM-L6-v2"
+            self._encoder = SentenceTransformer(model_name)
+            self._encoder_name = model_name
         else:
             self._encoder = SimpleEmbedding(dim=256)
             self._encoder_name = "simple_trigram"
@@ -173,7 +174,10 @@ class VectorIndex:
             return {"error": "no content extracted"}
 
         # Encode all texts
-        vectors = self._encoder.encode_batch(texts)
+        if hasattr(self._encoder, 'encode_batch'):
+            vectors = self._encoder.encode_batch(texts)
+        else:
+            vectors = self._encoder.encode(texts).tolist()
 
         # Store
         self._vectors = vectors
