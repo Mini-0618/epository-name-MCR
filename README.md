@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  一个会<strong>思考</strong>的本地 AI Agent 运行时。<br/>
-  4 层记忆、世界模型预测、生物启发免疫系统、代码安全沙箱——<br/>
-  全部跑在你自己的机器上，零云端依赖。
+  一个会<strong>思考</strong>的安全审计系统。<br/>
+  不只扫描，还能推理、记忆、进化。<br/>
+  本地运行，零云端依赖。
 </p>
 
 <p align="center">
@@ -26,18 +26,58 @@
 
 ---
 
-## 为什么选 MCR？
+## 快速开始
 
-| | agenticSeek | MCR |
-|---|---|---|
-| **代码安全** | ❌ `exec()` 直接执行，无沙箱 | ✅ 三层防御（AST 分析 + 受限执行 + 审计链） |
-| **记忆** | ❌ 单层对话历史 | ✅ 4 层记忆（工作→情景→语义→归档），自动巩固 |
-| **决策** | ❌ 先做再想 | ✅ 世界模型预测 + 风险门控（先想再做） |
-| **自愈** | ❌ 崩溃就崩溃 | ✅ 免疫系统（7 种威胁检测 + 自动修复） |
-| **审计** | ❌ 无日志 | ✅ 事件溯源 + HMAC 密码学证明链 |
-| **LLM** | ✅ 7 个 Provider | ✅ 5 个 Provider（Ollama / OpenAI / Anthropic / DeepSeek / Local） |
+```bash
+# 克隆
+git clone https://github.com/Mini-0618/MCR.git
+cd MCR
 
-**一句话：agenticSeek 做广度（浏览器 + 多语言），MCR 做深度（记忆 + 安全 + 认知）。**
+# 审计你的网站
+python mcr_audit_smart.py example.com
+
+# 审计你的服务器
+python mcr_audit_smart.py 192.168.1.1
+
+# 审计本机
+python mcr_audit_smart.py localhost
+```
+
+**不需要装任何依赖。只用 Python 标准库。**
+
+报告自动保存在 `audit_reports/` 目录。
+
+---
+
+## 它能发现什么？
+
+**端口风险：**
+- 🔴 Redis/MongoDB 默认无认证
+- 🔴 RDP/SMB 暴露（勒索软件入口）
+- 🟠 MySQL/MSSQL 数据库暴露
+- 🟡 FTP/Telnet 明文传输
+
+**Web 路径风险：**
+- 🔴 `.git` 源码泄露
+- 🔴 `.env` 密钥泄露
+- 🔴 `phpmyadmin` 数据库管理界面暴露
+- 🟠 `admin`/`wp-admin` 管理后台
+
+**关联推理（普通扫描器做不到）：**
+- 数据库 + 管理界面 = 攻击者可以直接操作数据库
+- Redis + SSH = 攻击者可以写入公钥远程登录
+- .env + 数据库 = 数据库密码可能已泄露
+
+---
+
+## 为什么用 MCR？
+
+| 普通扫描器 | MCR |
+|-----------|-----|
+| 告诉你"端口 445 开着" | 告诉你"SMB 有 EternalBlue 漏洞 (CVE-2017-0144)，打 MS17-010 补丁" |
+| 扫完就忘 | 记住每次扫描，下次告诉你"新开了什么端口" |
+| 列表输出 | 关联推理："数据库+管理界面=极高风险" |
+| 不会进化 | 越审越准 |
 
 ---
 
