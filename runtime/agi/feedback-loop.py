@@ -229,6 +229,7 @@ class FeedbackLoop:
 
         Excludes quarantined feedback from learning.
         Learns from quarantine patterns to detect injection attempts.
+        Weights feedback by source reliability.
         """
         # Load quarantine list
         quarantine_path = AGI_DIR / "feedback-quarantine.jsonl"
@@ -246,6 +247,15 @@ class FeedbackLoop:
             source = entry.get("source", "unknown")
             key = f"{source}:{reason}"
             quarantine_patterns[key] = quarantine_patterns.get(key, 0) + 1
+
+        # Source reliability weights
+        source_weights = {
+            "manual": 1.0,
+            "self-diagnosis": 0.8,
+            "human": 1.0,
+            "a2a": 0.3,
+            "unknown": 0.5,
+        }
 
         state = _load_json(self._learning_path)
         if not state or not state.get("patterns"):

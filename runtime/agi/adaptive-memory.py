@@ -280,6 +280,20 @@ class MemoryStore:
 
         return {"compressed": len(compressed), "remaining": len(self.memories)}
 
+    def deduplicate(self):
+        """Remove duplicate memories by content hash."""
+        seen = set()
+        unique = []
+        for m in self.memories:
+            content = m.get("summary", "") + m.get("content", "")
+            h = hash(content)
+            if h not in seen:
+                seen.add(h)
+                unique.append(m)
+        removed = len(self.memories) - len(unique)
+        self.memories = unique
+        return {"removed": removed, "remaining": len(unique)}
+
     def populate_layers(self, layer_mem, event_count=None):
         """
         Load all memories into LayeredMemory tiers.

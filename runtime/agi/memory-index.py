@@ -105,6 +105,8 @@ class MemoryIndex:
         self._last_access: Dict[str, str] = {}  # mem_id -> ISO timestamp
         self._coaccess: Dict[str, Set[str]] = defaultdict(set)
         self._tick: int = 0
+        self._search_cache: Dict[str, List[Dict]] = {}  # query -> results cache
+        self._cache_max_size = 100
 
         if memory_path and os.path.exists(memory_path):
             self.build()
@@ -180,6 +182,11 @@ class MemoryIndex:
         """
         if not query:
             return self._recent_memories(tier, limit)
+
+        # Check cache
+        cache_key = f"{query}:{tier}:{limit}:{min_score}"
+        if cache_key in self._search_cache:
+            return self._search_cache[cache_key]
 
         query_tokens = _tokenize(query)
         if not query_tokens:
@@ -258,7 +265,15 @@ class MemoryIndex:
         for r in results[:limit]:
             self._access_count[r["memory_id"]] += 1
 
-        return results[:limit]
+        # Cache results
+        final_results = results[:limit]
+        if len(self._search_cache) >= self._cache_max_size:
+            # Remove oldest entry
+            oldest_key = next(iter(self._search_cache))
+            del self._search_cache[oldest_key]
+        self._search_cache[cache_key] = final_results
+
+        return final_results
 
     def _recent_memories(self, tier: Optional[str], limit: int) -> List[Dict[str, Any]]:
         """Return most recent memories (fallback when no query text)."""

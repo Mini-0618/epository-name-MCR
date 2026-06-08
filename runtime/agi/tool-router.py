@@ -107,7 +107,48 @@ class ToolRouter:
     def __init__(self, ecosystem_root: str | Path | None = None):
         self._root = Path(ecosystem_root) if ecosystem_root else ECOSYSTEM_ROOT
         self._log_path = self._root / "runtime" / "agi" / "tool-router-log.jsonl"
+        self._history_path = self._root / "runtime" / "agi" / "tool-router-history.json"
         self._tools = TOOL_CAPABILITIES.copy()
+        self._history = self._load_history()
+
+    def _load_history(self) -> Dict[str, Any]:
+        """Load route history for learning."""
+        if self._history_path.exists():
+            try:
+                return json.loads(self._history_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                pass
+        return {}
+
+    def _save_history(self) -> None:
+        """Save route history."""
+        self._history_path.parent.mkdir(parents=True, exist_ok=True)
+        self._history_path.write_text(
+            json.dumps(self._history, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
+
+    def learn_route(self, task_type: str, tool: str, success: bool) -> None:
+        """Learn from successful/failed routes."""
+        key = f"{task_type}:{tool}"
+        if key not in self._history:
+            self._history[key] = {"success": 0, "failure": 0}
+        if success:
+            self._history[key]["success"] += 1
+        else:
+            self._history[key]["failure"] += 1
+        self._save_history()
+
+    def get_route_confidence(self, task_type: str, tool: str) -> float:
+        """Get confidence for a specific route based on history."""
+        key = f"{task_type}:{tool}"
+        if key not in self._history:
+            return 0.5  # neutral
+        h = self._history[key]
+        total = h["success"] + h["failure"]
+        if total == 0:
+            return 0.5
+        return h["success"] / total
 
     def classify_task(self, task_description: str) -> Tuple[str, float, List[str]]:
         """

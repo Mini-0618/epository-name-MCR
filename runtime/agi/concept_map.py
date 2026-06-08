@@ -178,13 +178,15 @@ class ConceptMap:
     # ------------------------------------------------------------------
 
     def infer(self, observation: str,
-              context: Optional[List[str]] = None) -> List[Dict[str, Any]]:
+              context: Optional[List[str]] = None,
+              days_since_last_evidence: int = 0) -> List[Dict[str, Any]]:
         """
         Infer risk candidates from observation + context.
 
         Args:
             observation: The observation string (e.g., "pacs_detected")
             context: List of context flags (e.g., ["exposed_port", "credential_surface"])
+            days_since_last_evidence: Days since last evidence for confidence decay
 
         Returns: List of risk candidates with confidence scores
         """
@@ -225,12 +227,17 @@ class ConceptMap:
             if conclusion in excluded_risks:
                 continue
 
-            # Calculate confidence
+            # Calculate confidence with decay
             concept_conf = resolution["confidence"]
             conf_range = rule.get("confidence_range", [0.1, 0.5])
             # Scale confidence by concept confidence
             base_conf = (conf_range[0] + conf_range[1]) / 2
             final_conf = base_conf * concept_conf
+
+            # Apply confidence decay based on evidence age
+            if days_since_last_evidence > 0:
+                decay = 0.95 ** days_since_last_evidence
+                final_conf = final_conf * decay
 
             result = {
                 "observation": observation,
@@ -241,6 +248,7 @@ class ConceptMap:
                 "rule_name": rule["name"],
                 "reasoning": rule["reasoning"],
                 "context_used": list(required_context),
+                "evidence_age_days": days_since_last_evidence,
                 "inferred_at": _now_iso(),
             }
             results.append(result)

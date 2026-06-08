@@ -219,6 +219,24 @@ class SessionManager:
         self.stop("auto-recover")
         return {"action": "recovered", "reason": f"stale session stopped (age={age:.0f}s)"}
 
+    @staticmethod
+    def rotate_checkpoints(checkpoint_dir: str, keep: int = 10) -> dict:
+        """Rotate old checkpoints, keep only the most recent ones."""
+        from pathlib import Path
+        ckpt_dir = Path(checkpoint_dir)
+        if not ckpt_dir.exists():
+            return {"action": "none", "reason": "checkpoint dir not found"}
+
+        files = sorted(ckpt_dir.glob("ckpt-*.json"))
+        if len(files) <= keep:
+            return {"action": "none", "reason": f"only {len(files)} checkpoints, no rotation needed"}
+
+        to_remove = files[:-keep]
+        for f in to_remove:
+            f.unlink()
+
+        return {"action": "rotated", "removed": len(to_remove), "kept": keep}
+
 
 def _iso(ts: float) -> str:
     """Format timestamp as ISO 8601."""

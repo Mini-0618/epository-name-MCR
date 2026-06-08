@@ -542,6 +542,52 @@ class SelfDiagnosis:
         except Exception as e:
             return {"status": "error", "message": str(e)}
 
+    def health_trend(self, history_path: Optional[Path] = None) -> Dict[str, Any]:
+        """Analyze health score trend over time."""
+        if history_path is None:
+            history_path = self._root / "runtime" / "agi" / "diagnosis-history.jsonl"
+
+        if not history_path.exists():
+            return {"trend": "no_history", "scores": []}
+
+        scores = []
+        try:
+            for line in history_path.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line:
+                    try:
+                        entry = json.loads(line)
+                        scores.append(entry.get("health_score", 0))
+                    except json.JSONDecodeError:
+                        continue
+        except OSError:
+            pass
+
+        if len(scores) < 2:
+            return {"trend": "insufficient_data", "scores": scores}
+
+        recent = scores[-5:]
+        older = scores[-10:-5] if len(scores) >= 10 else scores[:5]
+
+        recent_avg = sum(recent) / len(recent)
+        older_avg = sum(older) / len(older)
+        delta = recent_avg - older_avg
+
+        if delta > 2:
+            trend = "improving"
+        elif delta < -2:
+            trend = "declining"
+        else:
+            trend = "stable"
+
+        return {
+            "trend": trend,
+            "recent_avg": round(recent_avg, 1),
+            "older_avg": round(older_avg, 1),
+            "delta": round(delta, 1),
+            "total_scores": len(scores),
+        }
+
 
 # ------------------------------------------------------------------
 # CLI

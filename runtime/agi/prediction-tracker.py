@@ -217,6 +217,28 @@ class PredictionTracker:
             "window": window,
         }
 
+    def calibration_buckets(self, bucket_size: float = 0.1) -> dict:
+        """Group predictions by confidence buckets for calibration analysis."""
+        self._ensure_loaded()
+        buckets = {}
+        for entry in self._entries:
+            bucket = round(entry["confidence"] / bucket_size) * bucket_size
+            bucket = round(bucket, 2)
+            if bucket not in buckets:
+                buckets[bucket] = {"total": 0, "correct": 0}
+            buckets[bucket]["total"] += 1
+            if entry["actual_outcome"]:
+                buckets[bucket]["correct"] += 1
+
+        # Calculate calibration error per bucket
+        for bucket, stats in buckets.items():
+            if stats["total"] > 0:
+                observed = stats["correct"] / stats["total"]
+                stats["observed_accuracy"] = round(observed, 3)
+                stats["calibration_error"] = round(abs(bucket - observed), 3)
+
+        return buckets
+
 
 # -- CLI --
 

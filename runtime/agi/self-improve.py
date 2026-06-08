@@ -493,6 +493,13 @@ class SelfImprove:
             results[fix_type] = self.apply_fix(fix_type, dry_run=dry_run)
         return results
 
+    def score_improvement(self, improvement: Dict[str, Any]) -> float:
+        """Score an improvement by impact, effort, and risk."""
+        impact = improvement.get("impact", 0.5)
+        effort = improvement.get("effort", 0.5)
+        risk = improvement.get("risk", 0.3)
+        return round((impact * (1 - risk)) / max(effort, 0.1), 3)
+
 
 def cli():
     """CLI entry point."""

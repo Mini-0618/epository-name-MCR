@@ -251,12 +251,14 @@ class CognitiveLoop:
 
         Analyzes patterns in observations and decides what to do next.
         Returns a decision with action, reasoning, and confidence.
+        Includes multi-step planning for complex decisions.
         """
         if not observations:
             return {
                 "action": "wait",
                 "reasoning": "No observations to analyze",
                 "confidence": 0.0,
+                "plan": [],
             }
 
         # Analyze observation patterns
@@ -278,13 +280,20 @@ class CognitiveLoop:
             if "risk" in content or "vuln" in content:
                 patterns["risk_mentions"] += 1
 
-        # Decision logic
+        # Decision logic with multi-step planning
         if patterns["failure_count"] > 2:
             return {
                 "action": "investigate_failures",
                 "reasoning": f"Found {patterns['failure_count']} failures in observations",
                 "confidence": 0.8,
                 "patterns": patterns,
+                "plan": [
+                    "1. Identify failure root causes",
+                    "2. Check for common patterns",
+                    "3. Generate fix suggestions",
+                    "4. Apply safe fixes",
+                    "5. Verify fixes",
+                ],
             }
         elif patterns["risk_mentions"] > 0:
             return {
@@ -292,6 +301,12 @@ class CognitiveLoop:
                 "reasoning": f"Found {patterns['risk_mentions']} risk mentions",
                 "confidence": 0.7,
                 "patterns": patterns,
+                "plan": [
+                    "1. Identify risk sources",
+                    "2. Assess risk severity",
+                    "3. Generate mitigation plan",
+                    "4. Apply mitigations",
+                ],
             }
         elif patterns["stale_count"] > 2:
             return {
@@ -299,6 +314,12 @@ class CognitiveLoop:
                 "reasoning": f"Found {patterns['stale_count']} stale entries",
                 "confidence": 0.6,
                 "patterns": patterns,
+                "plan": [
+                    "1. Identify stale entries",
+                    "2. Check if still relevant",
+                    "3. Archive or update",
+                    "4. Rebuild index",
+                ],
             }
         else:
             return {
@@ -306,6 +327,7 @@ class CognitiveLoop:
                 "reasoning": "No significant patterns detected",
                 "confidence": 0.5,
                 "patterns": patterns,
+                "plan": [],
             }
 
     def execute(self, action: Dict[str, Any]) -> Dict[str, Any]:
