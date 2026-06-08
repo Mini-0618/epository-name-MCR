@@ -136,20 +136,15 @@ class Homeostasis:
         return None
 
     def _measure_memory(self, var_name: str) -> float:
-        """统计工作记忆条目数。"""
+        """统计工作记忆条目数。
+
+        只统计真正的记忆文件，不统计日志。
+        Working memory = memory/*.jsonl（life-memory, temporal-memory）
+        """
         memory_dir = RUNTIME_DIR / "memory"
         count = 0
         if memory_dir.exists():
             for f in memory_dir.glob("*.jsonl"):
-                try:
-                    with open(f, "r", encoding="utf-8") as fh:
-                        count += sum(1 for line in fh if line.strip())
-                except Exception:
-                    pass
-        # 也统计 .wal 下的记忆文件
-        wal_cognitive = RUNTIME_DIR / ".wal" / "cognitive"
-        if wal_cognitive.exists():
-            for f in wal_cognitive.glob("*.jsonl"):
                 try:
                     with open(f, "r", encoding="utf-8") as fh:
                         count += sum(1 for line in fh if line.strip())
