@@ -106,17 +106,28 @@
       ],
       "paths": [],
       "risk_score": 16
+    },
+    {
+      "target": "127.0.0.1",
+      "ip": "127.0.0.1",
+      "time": "2026-06-09T12:23:36.271413",
+      "ports": [
+        80,
+        445
+      ],
+      "paths": [],
+      "risk_score": 16
     }
   ],
   "findings": {
     "port:80": {
-      "last_seen": "2026-06-09T05:04:43.056809",
-      "count": 4,
+      "last_seen": "2026-06-09T12:23:36.271421",
+      "count": 5,
       "severity": "LOW"
     },
     "port:445": {
-      "last_seen": "2026-06-09T05:04:43.056813",
-      "count": 4,
+      "last_seen": "2026-06-09T12:23:36.271425",
+      "count": 5,
       "severity": "HIGH"
     },
     "port:21": {
