@@ -1,302 +1,123 @@
-<p align="center">
-  <strong>MCR — My Cognitive Runtime</strong>
-</p>
+# MCR — My Cognitive Runtime
 
-<p align="center">
-  一个会<strong>思考</strong>的安全审计系统。<br/>
-  不只扫描，还能推理、记忆、进化。<br/>
-  本地运行，零云端依赖。
-</p>
-
-<p align="center">
-  <code>pip install mcr-sdk && mcr-os status</code>
-</p>
-
-<p align="center">
-  <!-- TODO: 替换为实际截图 -->
-  <img src="docs/screenshot_demo.png" alt="MCR Demo" width="680"/>
-</p>
-
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square" alt="license"/></a>
-  <a href="https://github.com/Mini-0618/epository-name-MCR/stargazers"><img src="https://img.shields.io/github/stars/Mini-0618/epository-name-MCR?style=flat-square" alt="stars"/></a>
-  <img src="https://img.shields.io/badge/python-3.10+-green?style=flat-square" alt="python"/>
-  <a href="https://x.com/Maomaos8yt"><img src="https://img.shields.io/badge/X-@Maomaos8yt-black?style=flat-square&logo=x" alt="X"/></a>
-</p>
+一个会**思考**的本地 AI 系统。不只扫描，还能推理、记忆、进化。
 
 ---
 
-## 快速开始
+## 3 秒开始
 
 ```bash
-# 克隆
 git clone https://github.com/Mini-0618/MCR.git
 cd MCR
-
-# 审计你的网站
-python mcr_audit_smart.py example.com
-
-# 审计你的服务器
-python mcr_audit_smart.py 192.168.1.1
-
-# 审计本机
-python mcr_audit_smart.py localhost
+python mcr.py status
 ```
-
-**不需要装任何依赖。只用 Python 标准库。**
-
-报告自动保存在 `audit_reports/` 目录。
 
 ---
 
-## 它能发现什么？
+## 用法
 
-**端口风险：**
-- 🔴 Redis/MongoDB 默认无认证
-- 🔴 RDP/SMB 暴露（勒索软件入口）
-- 🟠 MySQL/MSSQL 数据库暴露
-- 🟡 FTP/Telnet 明文传输
+```bash
+# 安全审计
+python mcr.py "扫描 127.0.0.1 的安全漏洞"
+python mcr.py "扫描 example.com"
 
-**Web 路径风险：**
-- 🔴 `.git` 源码泄露
-- 🔴 `.env` 密钥泄露
-- 🔴 `phpmyadmin` 数据库管理界面暴露
-- 🟠 `admin`/`wp-admin` 管理后台
+# 代码分析
+python mcr.py "分析 runtime/unified_loop.py"
+python mcr.py "分析 mcr_audit_smart.py"
 
-**关联推理（普通扫描器做不到）：**
-- 数据库 + 管理界面 = 攻击者可以直接操作数据库
-- Redis + SSH = 攻击者可以写入公钥远程登录
-- .env + 数据库 = 数据库密码可能已泄露
+# 知识查询
+python mcr.py "搜索 Redis 安全知识"
+python mcr.py "查询 CVE-2017-0144"
+
+# 系统状态
+python mcr.py status
+
+# 持续运行（后台进化）
+python mcr.py loop
+python mcr.py loop 30   # 每 30 秒一轮
+```
 
 ---
 
-## 为什么用 MCR？
+## 它能干什么
 
-| 普通扫描器 | MCR |
-|-----------|-----|
-| 告诉你"端口 445 开着" | 告诉你"SMB 有 EternalBlue 漏洞 (CVE-2017-0144)，打 MS17-010 补丁" |
-| 扫完就忘 | 记住每次扫描，下次告诉你"新开了什么端口" |
-| 列表输出 | 关联推理："数据库+管理界面=极高风险" |
-| 不会进化 | 越审越准 |
-
----
-
-## 核心特性
-
-### 🧠 认知内核
-
-MCR 不只是"执行命令的 Agent"，它会**思考**。
-
-```
-感知 → 预测 → 门控 → 执行 → 记录 → 学习
-```
-
-- **世界模型**：每次执行前预测成功率和风险，高风险自动拦截
-- **认知循环**：observe → predict → gate → execute → record → learn
-- **不是读写 JSONL 的循环**，是真正的认知参与决策
-
-### 🛡️ 代码安全沙箱
-
-agenticSeek 社区最痛的点（[#483](https://github.com/Fosowl/agenticSeek/issues/483), [#494](https://github.com/Fosowl/agenticSeek/issues/494)），MCR 已经解决了。
-
-```
-Layer 1: 静态分析 — AST 扫描 + 正则匹配，拦截 15 种危险模式
-Layer 2: 受限执行 — shell=False，网络隔离，超时/内存限制
-Layer 3: 审计链 — 每次执行记录到 HMAC 签名的 provenance 链
-```
-
-拦截能力：
-- `exec()` / `eval()` → 拦截
-- `import subprocess` → 审计（standard 模式）或拦截（strict 模式）
-- `os.system()` / `rm -rf` / `curl | sh` → 拦截
-- 网络外联（socket / requests）→ 拦截
-
-### 🧬 4 层记忆系统
-
-像人脑一样记忆：海马体快速编码 → 新皮层慢速巩固。
-
-```
-working（工作记忆）→ episodic（情景记忆）→ semantic（语义记忆）→ archive（归档）
-```
-
-- 5785 行代码，完整的生命周期管理
-- 自动晋升和衰减
-- 语义检索（向量搜索，sentence-transformers）
-
-### 💉 免疫系统
-
-7 种已知威胁检测 + 免疫记忆 + 自动修复。
-
-| 威胁 | 检测 | 修复 |
+| 功能 | 命令 | 说明 |
 |------|------|------|
-| 内存压力 | working memory 条目 > 阈值 | 触发巩固 |
-| 事件堆积 | events.jsonl 过大 | 触发压缩 |
-| 编码损坏 | UTF-8 decode error | 自动修复 |
-| 缺失目录 | FileNotFoundError | 自动创建 |
-| 过期会话 | 超过 24h 无活动 | 自动清理 |
-| 高失败率 | 连续失败 > 3 次 | 报告 + 降频 |
-| 磁盘压力 | 使用率 > 90% | 清理日志 |
-
-### 🔌 统一 LLM 接口
-
-一个接口调所有模型：
-
-```python
-from llm_provider import LLMProvider
-
-provider = LLMProvider()
-response = provider.chat("你好", model="ollama:qwen2.5:7b")      # 本地
-response = provider.chat("你好", model="deepseek:deepseek-chat")  # 云端
-```
-
-支持：Ollama（本地）、OpenAI、Anthropic、DeepSeek、自定义端点
-
-### 📜 事件溯源
-
-所有状态变化通过 WAL（Write-Ahead Log）记录，支持：
-
-- 完整的状态重放：`runtime_state == replay(initial_state, WAL)`
-- HMAC-SHA256 密码学证明链
-- 跨版本状态恢复
+| 安全审计 | `python mcr.py "扫描 X"` | 端口扫描 + 路径扫描 + CVE 知识 + 关联推理 + 历史对比 |
+| 代码分析 | `python mcr.py "分析 X.py"` | 行数/函数/类/导入 + 风险扫描 |
+| 系统状态 | `python mcr.py status` | 稳态/免疫/进化/LLM 全部状态 |
+| 持续运行 | `python mcr.py loop` | 10 大生命系统持续运转 |
+| 知识查询 | `python mcr.py "搜索 X"` | 从 49 万安全知识文件中检索 |
 
 ---
 
-## 快速开始
+## 架构
 
-### 前置条件
-
-- Python 3.10+
-- Git
-- Ollama（可选，本地推理）
-
-### 安装
-
-```bash
-git clone https://github.com/Mini-0618/MCR.git
-cd MCR
-pip install -e sdk/python/
 ```
-
-### 运行
-
-```bash
-# 查看状态
-python runtime/unified_loop.py status
-
-# 跑一轮认知循环
-python runtime/unified_loop.py run --dry-run
-
-# 沙箱自测
-python runtime/sandbox.py test
-
-# 免疫系统巡逻
-python runtime/immune_system.py patrol
-```
-
-### 配置 LLM
-
-编辑 `config/llm_providers.json`：
-
-```json
-{
-  "default_model": "ollama:qwen2.5:7b",
-  "providers": {
-    "ollama": {
-      "type": "ollama",
-      "base_url": "http://localhost:11434",
-      "models": ["qwen2.5:7b", "deepseek-coder:6.7b"]
-    }
-  }
-}
+python mcr.py "你的任务"
+        │
+        ▼
+   ┌─────────┐
+   │  路由器  │ ← 自动判断任务类型
+   └────┬────┘
+        │
+   ┌────┴────────────────────────────┐
+   │                                 │
+   ▼                                 ▼
+安全审计                        认知循环
+mcr_audit_smart.py             unified_loop.py
+   │                                 │
+   ├── 端口扫描                  15 步认知循环
+   ├── 路径扫描                  10 大生命系统
+   ├── CVE 知识库                真实进化引擎
+   ├── 关联推理                  免疫自修复
+   └── 历史对比                  稳态自调节
 ```
 
 ---
 
-## 项目结构
+## 10 大生命系统
 
-```
-ECOSYSTEM/
-├── runtime/
-│   ├── unified_loop.py        # 认知主循环（11 步）
-│   ├── cognitive_bridge.py    # 认知内核桥接
-│   ├── world_model.py         # 世界模型 + 预测
-│   ├── sandbox.py             # 代码安全沙箱
-│   ├── sandbox_policy.py      # 静态分析引擎
-│   ├── immune_system.py       # 免疫系统
-│   ├── llm_provider.py        # 统一 LLM 接口
-│   ├── layered_memory.py      # 4 层记忆系统
-│   ├── task_engine.py         # 任务执行引擎
-│   ├── event_bus.py           # 事件总线
-│   ├── provenance.py          # 密码学证明链
-│   └── ...
-├── sdk/python/                # Python SDK
-├── config/                    # 配置文件
-├── registry/                  # App 注册表
-└── docs/                      # 文档
-```
+| # | 系统 | 功能 | 模块 |
+|---|------|------|------|
+| 1 | 神经系统 | 信号传导、认知处理 | event_bus, cognitive_bridge |
+| 2 | 记忆系统 | 4层巩固、Sleep 整理 | sleep_consolidator, agi/ |
+| 3 | 内分泌系统 | 全局广播、信号分级 | global_workspace |
+| 4 | 循环系统 | 消息运输、Agent 通信 | message_bus, agent_bridge |
+| 5 | 免疫系统 | 自修复、自诊断 | immune_system, failure_analyzer |
+| 6 | 进化系统 | 繁殖、变异、选择 | evolution, evolution_with_env |
+| 7 | 感觉系统 | 环境感知、机会检测 | environment_monitor |
+| 8 | 呼吸系统 | 外部交互、A2A/MCP | a2a_server, llm_provider |
+| 9 | 稳态系统 | 资源监控、负反馈调节 | homeostasis |
+| 10 | 自主神经系统 | 目标生成、动机驱动 | goal_generator |
 
 ---
 
-## 与 agenticSeek 的对比
+## 数字
 
-| 能力 | agenticSeek | MCR |
-|------|------------|-----|
-| 浏览器自动化 | ✅ Selenium | 🔜 计划中（Playwright） |
-| 代码执行安全 | ❌ 无沙箱 | ✅ 三层防御 |
-| 记忆系统 | ❌ 单层 | ✅ 4 层 + 语义检索 |
-| 世界模型 | ❌ 无 | ✅ 预测 + 风险门控 |
-| 事件溯源 | ❌ 无 | ✅ WAL + HMAC 证明链 |
-| 免疫系统 | ❌ 无 | ✅ 7 种威胁 + 自动修复 |
-| 多 LLM | ✅ 7 个 | ✅ 5 个 |
-| 语音 | ✅ TTS/STT | 🔜 计划中 |
-| 社区 | ⭐ 26K | 🌱 刚开始 |
-
-**MCR 的护城河不是代码（代码可以抄），是认知深度。**
+- 25 个核心模块
+- 23 个 AGI 模块
+- 18 个应用
+- 49 万安全知识文件
+- codex-local 准确率 96%
+- 本地运行，零云端依赖
 
 ---
 
-## 路线图
+## 依赖
 
-- [x] 认知内核接通（WorldModel + CognitiveLoop）
-- [x] 代码安全沙箱（AST + 受限执行 + 审计）
-- [x] 免疫系统（威胁检测 + 自动修复）
-- [x] 统一 LLM 接口（Ollama + 云端）
-- [ ] 全局工作空间（事件优先级广播）
-- [ ] Sleep 巩固（记忆离线整理）
-- [ ] 进化系统（技能交叉 + 变异 + 选择）
-- [ ] 浏览器自动化
-- [ ] 语音交互
+Python 3.10+，无额外依赖。
+
+可选：
+- `psutil` — 稳态系统 CPU/内存监控
+- `requests` — Web 路径扫描
 
 ---
 
-## 生物启发架构
+## 许可证
 
-MCR 不是"模块堆叠"，是按生物系统组织的数字有机体。
-
-| 生物系统 | MCR 子系统 | 功能 |
-|----------|-----------|------|
-| 🧠 神经系统 | EventBus + CognitiveLoop | 信号传导、认知处理 |
-| 🧬 记忆系统 | LayeredMemory | 4 层巩固 |
-| 🛡️ 免疫系统 | ImmuneSystem | 自修复、自诊断 |
-| 💉 内分泌系统 | GlobalWorkspace（计划中） | 全局广播 |
-| ⚖️ 稳态系统 | Homeostasis（计划中） | 资源自调节 |
-| 🧪 进化系统 | Evolution（计划中） | 技能进化 |
-| 👁️ 感觉系统 | EnvironmentMonitor | 环境感知 |
-
-详见 [生物启发架构文档](docs/MCR_BIO_INSPIRED_ARCHITECTURE.md)。
+Apache License 2.0
 
 ---
 
-## 贡献
-
-欢迎贡献！查看 [open issues](https://github.com/Mini-0618/MCR/issues) 或提 PR。
-
-## License
-
-Apache-2.0
-
----
-
-<p align="center">
-  <strong>MCR — 不是工具，是数字生命。</strong>
-</p>
+*MCR — 不只是工具，是数字有机体。*
