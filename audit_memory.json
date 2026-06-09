@@ -21,18 +21,263 @@
       ],
       "paths": [],
       "risk_score": 16
+    },
+    {
+      "target": "example.com",
+      "ip": "198.18.0.91",
+      "time": "2026-06-09T05:02:08.676537",
+      "ports": [
+        21,
+        22,
+        23,
+        25,
+        53,
+        80,
+        110,
+        143,
+        443,
+        445,
+        993,
+        995,
+        1433,
+        1521,
+        3306,
+        3389,
+        5432,
+        5900,
+        6379,
+        8080,
+        8443,
+        8888,
+        9200,
+        27017
+      ],
+      "paths": [
+        "admin",
+        "login",
+        "wp-admin",
+        "phpmyadmin",
+        "backup",
+        ".git",
+        ".env",
+        "robots.txt",
+        "sitemap.xml",
+        ".htaccess",
+        "web.config",
+        "api-docs",
+        "swagger",
+        "graphql",
+        "debug",
+        "server-status",
+        "console",
+        "manager/html",
+        ".svn",
+        ".DS_Store",
+        "admin",
+        "login",
+        "wp-admin",
+        "phpmyadmin",
+        "backup",
+        ".git",
+        ".env",
+        "robots.txt",
+        "sitemap.xml",
+        ".htaccess",
+        "web.config",
+        "api-docs",
+        "swagger",
+        "graphql",
+        "debug",
+        "server-status",
+        "console",
+        "manager/html",
+        ".svn",
+        ".DS_Store"
+      ],
+      "risk_score": 100
+    },
+    {
+      "target": "localhost",
+      "ip": "127.0.0.1",
+      "time": "2026-06-09T05:04:43.056801",
+      "ports": [
+        80,
+        445
+      ],
+      "paths": [],
+      "risk_score": 16
     }
   ],
   "findings": {
     "port:80": {
-      "last_seen": "2026-06-09T04:35:49.667309",
-      "count": 2,
+      "last_seen": "2026-06-09T05:04:43.056809",
+      "count": 4,
       "severity": "LOW"
     },
     "port:445": {
-      "last_seen": "2026-06-09T04:35:49.667313",
+      "last_seen": "2026-06-09T05:04:43.056813",
+      "count": 4,
+      "severity": "HIGH"
+    },
+    "port:21": {
+      "last_seen": "2026-06-09T05:02:08.676549",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:22": {
+      "last_seen": "2026-06-09T05:02:08.676553",
+      "count": 1,
+      "severity": "LOW"
+    },
+    "port:23": {
+      "last_seen": "2026-06-09T05:02:08.676555",
+      "count": 1,
+      "severity": "CRITICAL"
+    },
+    "port:25": {
+      "last_seen": "2026-06-09T05:02:08.676557",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:53": {
+      "last_seen": "2026-06-09T05:02:08.676558",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:110": {
+      "last_seen": "2026-06-09T05:02:08.676561",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:143": {
+      "last_seen": "2026-06-09T05:02:08.676562",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:443": {
+      "last_seen": "2026-06-09T05:02:08.676563",
+      "count": 1,
+      "severity": "LOW"
+    },
+    "port:993": {
+      "last_seen": "2026-06-09T05:02:08.676565",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:995": {
+      "last_seen": "2026-06-09T05:02:08.676567",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:1433": {
+      "last_seen": "2026-06-09T05:02:08.676568",
+      "count": 1,
+      "severity": "HIGH"
+    },
+    "port:1521": {
+      "last_seen": "2026-06-09T05:02:08.676569",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:3306": {
+      "last_seen": "2026-06-09T05:02:08.676570",
+      "count": 1,
+      "severity": "HIGH"
+    },
+    "port:3389": {
+      "last_seen": "2026-06-09T05:02:08.676571",
+      "count": 1,
+      "severity": "HIGH"
+    },
+    "port:5432": {
+      "last_seen": "2026-06-09T05:02:08.676572",
+      "count": 1,
+      "severity": "LOW"
+    },
+    "port:5900": {
+      "last_seen": "2026-06-09T05:02:08.676573",
+      "count": 1,
+      "severity": "HIGH"
+    },
+    "port:6379": {
+      "last_seen": "2026-06-09T05:02:08.676574",
+      "count": 1,
+      "severity": "CRITICAL"
+    },
+    "port:8080": {
+      "last_seen": "2026-06-09T05:02:08.676575",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:8443": {
+      "last_seen": "2026-06-09T05:02:08.676576",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:8888": {
+      "last_seen": "2026-06-09T05:02:08.676577",
+      "count": 1,
+      "severity": "MEDIUM"
+    },
+    "port:9200": {
+      "last_seen": "2026-06-09T05:02:08.676578",
+      "count": 1,
+      "severity": "LOW"
+    },
+    "port:27017": {
+      "last_seen": "2026-06-09T05:02:08.676579",
+      "count": 1,
+      "severity": "CRITICAL"
+    },
+    "path:admin": {
+      "last_seen": "2026-06-09T05:02:08.676590",
       "count": 2,
       "severity": "HIGH"
+    },
+    "path:wp-admin": {
+      "last_seen": "2026-06-09T05:02:08.676591",
+      "count": 2,
+      "severity": "HIGH"
+    },
+    "path:phpmyadmin": {
+      "last_seen": "2026-06-09T05:02:08.676593",
+      "count": 2,
+      "severity": "CRITICAL"
+    },
+    "path:.git": {
+      "last_seen": "2026-06-09T05:02:08.676594",
+      "count": 2,
+      "severity": "CRITICAL"
+    },
+    "path:.env": {
+      "last_seen": "2026-06-09T05:02:08.676595",
+      "count": 2,
+      "severity": "CRITICAL"
+    },
+    "path:robots.txt": {
+      "last_seen": "2026-06-09T05:02:08.676596",
+      "count": 2,
+      "severity": "MEDIUM"
+    },
+    "path:swagger": {
+      "last_seen": "2026-06-09T05:02:08.676597",
+      "count": 2,
+      "severity": "MEDIUM"
+    },
+    "path:graphql": {
+      "last_seen": "2026-06-09T05:02:08.676598",
+      "count": 2,
+      "severity": "MEDIUM"
+    },
+    "path:debug": {
+      "last_seen": "2026-06-09T05:02:08.676599",
+      "count": 2,
+      "severity": "HIGH"
+    },
+    "path:.svn": {
+      "last_seen": "2026-06-09T05:02:08.676600",
+      "count": 2,
+      "severity": "CRITICAL"
     }
   },
   "patterns": []
