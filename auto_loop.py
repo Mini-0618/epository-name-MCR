@@ -54,17 +54,19 @@ def main():
     from global_workspace import GlobalWorkspace
     from homeostasis import Homeostasis
     from sleep_consolidator import SleepConsolidator
-    from evolution import EvolutionEngine
     from immune_system import patrol
+    from evolution_with_env import EvolvingStrategy, DynamicEnvironment, evaluate_strategy
 
     ws = GlobalWorkspace()
     hs = Homeostasis()
     sc = SleepConsolidator()
-    evo = EvolutionEngine(state_path=str(RUNTIME_DIR / ".wal" / "cognitive" / "evolution_state.json"), population_size=10)
 
-    if not evo.state.get("population"):
-        evo.initialize_population()
-        log("进化种群初始化完成")
+    # 真实进化引擎（动态环境）
+    env = DynamicEnvironment()
+    population = [EvolvingStrategy() for _ in range(10)]
+    evo_gen = 0
+    evo_history = []
+    log("真实进化引擎初始化完成（动态环境）")
 
     cycle = 0
     errors = 0
@@ -85,8 +87,35 @@ def main():
             if cycle % 5 == 0:
                 sc_result = sc.consolidate()
 
-            # 4. 进化 1 代
-            evo_result = evo.evolve_generation()
+            # 4. 真实进化 1 代（动态环境）
+            env.evolve()
+            for strategy in population:
+                strategy.fitness = evaluate_strategy(strategy, env)
+            population.sort(key=lambda s: s.fitness, reverse=True)
+            best = population[0]
+            avg = sum(s.fitness for s in population) / len(population)
+            evo_gen += 1
+
+            # 繁殖
+            import random
+            new_pop = [EvolvingStrategy(dict(best.genes))]
+            while len(new_pop) < 10:
+                p1 = max(random.sample(population, min(3, len(population))), key=lambda s: s.fitness)
+                p2 = max(random.sample(population, min(3, len(population))), key=lambda s: s.fitness)
+                if random.random() < 0.7:
+                    child = p1.crossover(p2)
+                else:
+                    child = p1.mutate()
+                new_pop.append(child)
+            population = new_pop
+
+            evo_result = {
+                "gen": evo_gen,
+                "best_fitness": best.fitness,
+                "avg_fitness": round(avg, 4),
+                "best_ports": len(best.discoveries),
+                "env_ports": sorted(env.open_ports),
+            }
 
             # 5. 免疫巡逻（每 10 轮）
             immune = {"summary": {"detected": 0, "fixed": 0}}
@@ -106,8 +135,10 @@ def main():
                 "ts": datetime.now().isoformat(),
                 "cycle": cycle,
                 "abnormal": abnormal,
-                "evo_gen": evo_result["generation"],
+                "evo_gen": evo_result["gen"],
                 "evo_fitness": evo_result["best_fitness"],
+                "evo_avg": evo_result["avg_fitness"],
+                "evo_ports": evo_result["best_ports"],
                 "immune": immune["summary"],
                 "sc": sc_result,
                 "fixes": fixes,
@@ -120,7 +151,7 @@ def main():
             # 输出
             abn = f" abnormal={abnormal}" if abnormal else ""
             fix = f" fixes={fixes}" if fixes else ""
-            log(f"#{cycle:4d} | evo={evo_result['generation']} fitness={evo_result['best_fitness']:.4f} | immune={immune['summary']['detected']} | sc={sc_result['replayed']}/{sc_result['cleaned']}{abn}{fix}")
+            log(f"#{cycle:4d} | evo={evo_result['gen']} fitness={evo_result['best_fitness']:.4f} avg={evo_result['avg_fitness']:.4f} ports={evo_result['best_ports']} | immune={immune['summary']['detected']} | sc={sc_result['replayed']}/{sc_result['cleaned']}{abn}{fix}")
 
             errors = 0  # 重置错误计数
 
